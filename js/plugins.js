@@ -22,6 +22,9 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+//Toggle plugin
+
 $(document).ready(function() {
           $('.plus-toggle').click(function(){
             //get collapse content selector
@@ -41,3 +44,22 @@ $(document).ready(function() {
           });
 
         });
+
+//Owl-carousel 
+
+ $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})

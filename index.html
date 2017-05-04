@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="ru">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,12 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+
+    
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
     <link rel="stylesheet" href="css/fonts.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -24,166 +33,423 @@
             <!-- Add your site or application content here -->
             <header id="site_header">
                 <div class="container">
-                    <div class="row">
-                        <div class="logo-wrap col-xs-10 center-block col-sm-4"></div>
-                        <div class="contact_wrap visible-sm-block">
-                            <ul class="contact_list">
-                                <li class="contact_item"><a href="" class="contact_link"></a></li>
-                                <li class="contact_item"><a href="" class="contact_link"></a></li>
-                                <li class="contact_item"><a href="" class="contact_link"></a></li>
-                            </ul>
+                    <div class="row header_top">
+                        <div class="logo-wrap col-xs-10 center-block col-sm-4">
+                            <a href="#" title="One club butic"><img src="img/logo.svg" alt="one club logo"></a>
                         </div>
+                        <div class="contact_wrap hidden-xs">
+                            <ul class="contact_list">
+                                <li class="contact_item">
+                                    <a href="tel:+380443590899" class="contact_link"><img src="img/phone.svg" alt="" class="header_icon">+380 44 359-08-99 </a><span> <img href="#phone_list" src="img/arrow-down-orange.png" alt="" class="plus-toggle"></span><br>
+                                    <span>Пн-Вс:9:00-21:00</span>
+                                    <ul  id="phone_list" style="display:none">
+                                        <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
+                                        <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
+                                        <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
+                                    </ul>        
+                                </li>
+                                <li class="contact_item"><img src="img/person.svg" alt="" class="header_icon"><a href="#" class="contact_link">Войти</a></li>
+                                <li class="contact_item"><img src="img/basket.svg" alt="" class="header_icon"><a href="#" class="contact_link">Корзина</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="open_basket visible-xs-block"><img src="img/header/bag.png" alt="" class="backet_xs"></div>
                     </div>
-                    <div class="row">
-                        <div class="toggle-catalog center-block col-xs-12 col-sm-5"></div>
-                        <div class="search-wrap visible-sm-block col-sm-4 col-sm-offset-3"></div>
+                    <div class="row header_bottom">
+                        <div class="catalog-toggle center-block col-xs-12 col-sm-5">
+                            <a href="#" class="catalog-link">Акции</a>
+                            <a href="#" class="catalog-link">Каталог</a>
+                        </div>  
+                        <div class="search-wrap hidden-xs col-sm-4 col-sm-offset-3"></div>
                     </div>
-                    <div class="row visible-sm-block">
+                    <div class="row hidden-xs">
                         <nav class="container-fluid">
                             <div class="row menu">
-                                <div class="menu_item col-sm-6"></div>
+                                <div class="menu_item col-sm-2">Женщинам</div>
+                                <div class="menu_item col-sm-2">Мужчинам</div>
+                                <div class="menu_item col-sm-2">Детям</div>
+                                <div class="menu_item col-sm-2">Косметика</div>
+                                <div class="menu_item col-sm-2">Для дома</div>
+                                <div class="menu_item col-sm-2">Бренды</div>
                             </div>
                         </nav>
                     </div>
                 </div>
             </header>
+
+
+
+
+
+
+
+
+
             <section id="content">
                 <div class="container">
-                    <div class="row card_breadcrumbs"></div>
-                    <div class="row card-content">
-                        <div class="card-slider col-xs-12 col-sm-7"></div>
-                        <div class="card-configuration col-xs-12 col-sm-5">
-                            <div class="item_name"><span class="item_name"></span><span class="item_about"></span></div>
-                            <div class="row item_price">
-                                <div class="price col-xs-6"></div>
-                                <div class="discount-col-xs-6"></div>
-                            </div>
-                            <div class="item_color_toggle">
-                                <span></span>
-                                <ul class="item_color_pallete">
-                                    <li class="item_color"><a href="" class="color_all"></a></li>
-                                    <li class="item_color"><a href="" class="color_all"></a></li>
-                                    <li class="item_color"><a href="" class="color_all"></a></li>
-                                    <li class="item_color"><a href="" class="color_all"></a></li>
-                                    <li class="item_color"><a href="" class="color_all"></a></li>
-                                </ul>
-                            </div>
-                            <div class="item_size_toggle">
-                                <p><span></span><span></span></p>
-                                <ul class="item_size_pallete">
-                                    <li class="item_size"><a href="" class="size_all"></a></li>
-                                    <li class="item_size"><a href="" class="size_all"></a></li>
-                                    <li class="item_size"><a href="" class="size_all"></a></li>
-                                    <li class="item_size"><a href="" class="size_all"></a></li>
-                                    <li class="item_size"><a href="" class="size_all"></a></li>
-                                </ul>
-                                <p><span></span><img src="" alt=""></p>
-                            </div>
-                            <div class="item_value">
-                                <div class="item_amount">
-                                    <a href="#" class="item_amount_decrease">-</a>
-                                    <input type="text" type="number" class="amount">
-                                    <a href="#" class="item_amount_increase">+</a>
-                                    <div class="item_aount_caution"></div>
-                                </div>
-                                <div class="item_action">
-                                    <div class="item_like"></div>
-                                    <div class="item_tobasket"></div>
-                                </div>       
-                            </div>
-                            <div class="order_item_title">
-                                <p>
-                                    <img src="/img/new/phone.png" alt="">
-                                    <span>Оформить заказ по телефону</span>
-                                </p>
-                                <p class="order_call">
-                                    <a href="tel:+380954589846">+38 095 458-98-46</a>
-                                    <span class="visible-sm-inline">или</span>
-                                    <a href="tel:+380443590899">+38 044 359-08-99</a>
-                                </p>
+                    <div class="row card_breadcrumbs">
+                        <nav class="breadcrumb">
+                          <a class="breadcrumb-item" href="#">Главная страница</a>
+                          <a class="breadcrumb-item" href="#">Каталог</a>
+                          <a class="breadcrumb-item" href="#">Категория 1</a><br class="visible-xs">
+                          <span class="breadcrumb-item active">Costa Patch Pocket Denim Top</span>
+                      </nav>
+                  </div>
+                  <div class="row card-content">
+                    <div class="card-slider col-xs-12 col-sm-7">
 
-                                <p class="shops">
-                                    <img src="/img/new/loc.png" alt="">
-                                    <a class="shop_amount" href="#">
-                                        Наличие в бутиках ONE CLUB
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="info_block details_block">
-                                <h2>Описание и детали<span  href="#collapse1" class="plus-toggle">+</span></h2>
-                                <div id="collapse1" style="display:none">
-                                    <p>
-                                        <b>Состав:</b>&nbsp;
-                                        100% шерсть
-                                    </p>
-                                    <p>
-                                        <b>Детали:</b>
-                                        <span id="product_description">
-                                            Комбинированная кофта прямого кроя с длинным рукавом. Застегивается на пуговицы, V-образный вырез
-                                        </span>
-                                    </p>
-                                    <p class="t-code">
-                                        Код товара:
-                                        <span>
-                                            1148-3127-8111-8580
-                                        </span>
-                                    </p>
+                      <!-- SLIDERs -->
+                      <!-- owl slider for mobile - visible-xs -->
+                      <div class="owl-carousel owl-theme visible-xs">
+                        <div class="item"><a href="#" class="card_item_photo"><img src="img/dress-1.jpg" alt="" class="card_item_img"></a></div>
+                        <div class="item"><a href="#" class="card_item_photo"><img src="img/dress-1.jpg" alt="" class="card_item_img"></a></div>
+                        <div class="item"><a href="#" class="card_item_photo"><img src="img/dress-1.jpg" alt="" class="card_item_img"></a></div>
+                        <div class="item"><a href="#" class="card_item_photo"><img src="img/dress-1.jpg" alt="" class="card_item_img"></a></div>
+                    </div>
 
-                                </div>
-                            </div>
-                            <div class="info_block measure_block">
-                                <h2>Измерения<span href="#collapse2" class="plus-toggle">+</span></h2>
-                                <div id="collapse2" style="display:none">
-                                 <p class="">
-                                    <b>Размер вещи на фото:</b>S
-                                </p>
-                                <p class="">Обхват груди: 85см</p>
-                                <p class="">Обхват талии: 61см</p>
-                                <p class="">Обхват бедер: 175см</p>
-                                <p class="">Рост:175см</p><br>
-                                <p><b>Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, <span><a href="#">таблицей размеров</a></span> или обратитесь к нашему консультанту.</b></p> 
-                            </div>
+                </div>
+                <!-- owl slider for tablets and desktops - hidden-xs -->
+
+                <!-- SLIDERs -->
+                <div class="card-configuration col-xs-12 col-sm-5">
+                    <div class="item_name"><span class="item_name">Current Elliott</span><span class="item_about">Costa Patch Pocket <br class="visible-xs"> Denim Top</span></div>
+                    <div class="row item_price">
+                        <div class="price col-xs-6">
+                            <span>30 000</span>грн. <br class="visible-xs">
+                            <span>15 000</span>грн.
                         </div>
-                        <div class="info_block delivery_block">
-                            <h2>Доставка и возврат<span href="#collapse3" class="plus-toggle">+</span></h2>
-                            <div id="collapse3" style="display:none">
-                               <p class="padbot padtop visible">
-                                <b>Ожидаемая дата доставки:</b>
-                                06.05.2017 - 10.05.2017
-                            </p>
-                            <p class="padbot visible"><b>Бесплатная доставка при заказе от 2000 грн​, а также при оплате банковской картой.</b></p>
-                            <p class="padbot"><b>Вы можете выбрать любой удобный способ доставки:</b></p>
-                            <p class="padbot">1. Самовывоз из наших бутиков в Киеве (адрес выбирается в момент оформления заказа) — бесплатно.<br>2. Курьером по Киеву.<br>3. Сервисом доставки "Нова пошта" по всей Украине.</p>
-                            <p><b>Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.​</b></p> 
+                        <div class="discount-col-xs-6">
+                            <img src="img/discount-50.png" alt="50% discount" class="img_discount">
                         </div>
                     </div>
-                </div>
-                <div class="social-sm-wrap"></div>
+                    <div class="item_color_toggle">
+                        <p><b>Цвет:</b>Синий</p>
+                        <ul class="item_color_pallete">
+                            <li class="item_color"><a href="" class="color_all "><span></span></a></li>
+                            <li class="item_color"><a href="" class="color_all active"><span></span></a></li>
+                            <li class="item_color"><a href="" class="color_all"><span></span></a></li>
+                            <li class="item_color"><a href="" class="color_all"><span></span></a></li>
+                            <li class="item_color"><a href="" class="color_all"><span></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="item_size_toggle">
+                        <p>Размер  <a href="" class="item_popup"><span>Таблица размеров</span></a></p>
+                        <ul class="item_size_pallete">
+                            <li class="item_size"><a href="" class="size_all "><span>XS</span></a></li>
+                            <li class="item_size"><a href="" class="size_all active"><span>S</span></a></li>
+                            <li class="item_size"><a href="" class="size_all unavailable"><span>M</span></a></li>
+                            <li class="item_size"><a href="" class="size_all unavailable"><span>L</span></a></li>
+                            <li class="item_size"><a href="" class="size_all unavailable"><span>XL</span></a></li>
+                        </ul>
+                        <p class="fitit_text"><a href="" class="item_popup"><span>Примерить онлайн</span></a><img src="img/fit_now.jpg" alt=""></p>
+                    </div>
+                    <div class="item_value">
+                        <div class="item_amount">
+                            <a href="#" class="item_amount_decrease">-</a>
+                            <input type="text"  class="amount" value="1" readonly>
+                            <a href="#" class="item_amount_increase">+</a>
+                            <div class="item_aount_caution">
+                                <p>Осталось в наличии: <span>1 шт</span></p><p>Спешите купить сейчас!</p></div>
+                            </div>
+                            <div class="item_action">
+                                <div class="item_toaction item_tolike">
+                                    <img src="img/heart.png" alt="" class="item_like_img"><span class="hidden-xs" >в избранное</span>
+                                </div>
+                                <div class="item_toaction item_tobasket">
+                                    <img src="img/bag.png" alt="" class="tobacket_img"><span class="tobasket_text">Добавить в корзину</span>
+                                </div>
+                            </div>       
+                        </div>
+                        <div class="order_item_title">
+                            <p>
+                                <img src="/img/phone.png" alt="">
+                                <span>Оформить заказ по телефону</span>
+                            </p>
+                            <p class="order_call">
+                                <a href="tel:+380954589846" class="lighter_underline">+38 095 458-98-46</a>
+                                <br class="visible-xs"><span class="hidden-xs">или</span>
+                                <a href="tel:+380443590899" class="lighter_underline">+38 044 359-08-99</a>
+                            </p>
 
+                            <p class="shops">
+                                <img src="/img/loc.png" alt="">
+                                <a class="shop_amount" href="#">
+                                    Наличие в бутиках ONE CLUB
+                                </a>
+                            </p>
+                        </div>
+                        <div class="info_block details_block">
+                            <h2>Описание и детали<span  href="#collapse1" class="plus-toggle">+</span></h2>
+                            <div id="collapse1" style="display:none">
+                                <p><b>Состав:</b>&nbsp;100% трикотаж
+                                </p>
+                                <p><b>Сезон:</b>&nbsp;демисезон</p>
+                                <p><b>Детали:</b>
+                                    <span id="product_description">
+                                       Облегающая модель выполнена из гладкого трикотажа.
+                                   </span>
+                               </p>
+                               <p class="t-code">
+                                Код товара:
+                                <span>
+                                 1234-5678-8765-4321
+                             </span>
+                         </p>
+
+                     </div>
+                 </div>
+                 <div class="info_block measure_block">
+                    <h2>Измерения<span href="#collapse2" class="plus-toggle">+</span></h2>
+                    <div id="collapse2" style="display:none">
+                     <p class="">
+                        <b>Размер вещи на фото:</b>S
+                    </p>
+                    <p class="">Обхват груди: 85см</p>
+                    <p class="">Обхват талии: 61см</p>
+                    <p class="">Обхват бедер: 175см</p>
+                    <p class="">Рост:175см</p><br>
+                    <p><b>Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, <span><a href="#">таблицей размеров</a></span> или обратитесь к нашему консультанту.</b></p> 
+                </div>
+                <div class="info_block delivery_block">
+                    <h2>Доставка и возврат<span href="#collapse3" class="plus-toggle">+</span></h2>
+                    <div id="collapse3" style="display:none">
+                       <p class="padbot padtop visible">
+                        <b>Ожидаемая дата доставки:</b>
+                        21.09.2016 – 23.09.2016
+                    </p>
+                    <p class="padbot visible"><b>Бесплатная доставка при заказе от 2000 грн​, а также при оплате банковской картой.</b></p>
+                    <p class="padbot"><b>Вы можете выбрать любой удобный способ доставки:</b></p>
+                    <p class="padbot">1. Самовывоз из наших бутиков в Киеве (адрес выбирается в момент оформления заказа) — бесплатно.<br>2. Курьером по Киеву.<br>3. Сервисом доставки "Нова пошта" по всей Украине.</p>
+                    <p><b>Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.​</b></p> 
+                </div>
             </div>
         </div>
 
-    </section>
-    section.another_items
-    section.look
-    section.helper
-    footer
+    </div>
+</div>
+<div class="row another_goods visible-xs-block">
+    <div class="col-xs-6 product-wrapper">
+        <div class="product_photo-wrapper">
+            <img src="img/good1.png" alt="" class="product_photo">
+            <div class="product_description">
+                <h3 class="product_name">Tanya Taylor</h3>
+                <p class="product_about">Andy Striped Mini Skirt</p>
+                <p class="product_price"><span class="price_old">30&nbsp;000&nbsp;грн.</span><span class="price_new">15&nbsp;000 грн.</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 product-wrapper">
+        <div class="product_photo-wrapper">
+            <img src="img/good2.png" alt="" class="product_photo">
+            <div class="product_description">
+                <h3 class="product_name">Tanya Taylor</h3>
+                <p class="product_about">Andy Striped Mini Skirt</p>
+                <p class="product_price"><span class="price_old">30&nbsp;000&nbsp;грн.</span><span class="price_new">15&nbsp;000 грн.</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 product-wrapper">
+        <div class="product_photo-wrapper">
+            <img src="img/good3.png" alt="" class="product_photo">
+            <div class="product_description">
+                <h3 class="product_name">Tanya Taylor</h3>
+                <p class="product_about">Andy Striped Mini Skirt</p>
+                <p class="product_price"><span class="price_old">30&nbsp;000&nbsp;грн.</span><span class="price_new">15&nbsp;000 грн.</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 product-wrapper">
+        <div class="product_photo-wrapper">
+            <img src="img/good4.png" alt="" class="product_photo">
+            <div class="product_description">
+                <h3 class="product_name">Tanya Taylor</h3>
+                <p class="product_about">Andy Striped Mini Skirt</p>
+                <p class="product_price"><span class="price_old">30&nbsp;000&nbsp;грн.</span><span class="price_new">15&nbsp;000 грн.</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6"><p><b>Поделиться</b></p></div>
 
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-    <script src="js.bootstrap.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <div class="col-xs-6">
+        <a class="#" href="" onclick="">
+            <img src="img/fb.png" alt="">
+        </a>
+        <a href="#" onclick="">
+            <img src="img/vk.png" alt="">
+        </a>
+        <a href="#" onclick="">
+            <img src="img/google-plus-logo.png" alt="">
+        </a>
+        <a href="#" onclick="">
+            <img src="img/twitter.png" alt="">
+        </a>
+    </div>
+</div>
+
+</div>
+</div>
+
+</section>
+<section class="another_goods hidden-xs">
+    <h2 class="goots_title"></h2>
+    <div class="goods-wrapper row">
+     <div class="col-xs-3 product-wrapper">
+        <div class="product_photo-wrapper">
+            <img src="img/item-other.jpg" alt="" class="product_photo">
+            <div class="product_description">
+                <h3 class="product_name">Tanya Taylor</h3>
+                <p class="product_about">Andy Striped Mini Skirt</p>
+                <p class="product_price"><span class="price_old">30&nbsp;000&nbsp;грн.</span><span class="price_new">15&nbsp;000 грн.</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3 product-wrapper">
+        <div class="product_photo-wrapper">
+            <img src="img/item-other.jpg" alt="" class="product_photo">
+            <div class="product_description">
+                <h3 class="product_name">Tanya Taylor</h3>
+                <p class="product_about">Andy Striped Mini Skirt</p>
+                <p class="product_price"><span class="price_old">30&nbsp;000&nbsp;грн.</span><span class="price_new">15&nbsp;000 грн.</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3 product-wrapper">
+        <div class="product_photo-wrapper">
+            <img src="img/item-other.jpg" alt="" class="product_photo">
+            <div class="product_description">
+                <h3 class="product_name">Tanya Taylor</h3>
+                <p class="product_about">Andy Striped Mini Skirt</p>
+                <p class="product_price"><span class="price_old">30&nbsp;000&nbsp;грн.</span><span class="price_new">15&nbsp;000 грн.</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3 product-wrapper">
+        <div class="product_photo-wrapper">
+            <img src="img/item-other.jpg" alt="" class="product_photo">
+            <div class="product_description">
+                <h3 class="product_name">Tanya Taylor</h3>
+                <p class="product_about">Andy Striped Mini Skirt</p>
+                <p class="product_price"><span class="price_old">30&nbsp;000&nbsp;грн.</span><span class="price_new">15&nbsp;000 грн.</span></p>
+            </div>
+        </div>
+    </div> 
+</div>
+</section>
+<section class="also_look">
+    <div class="also_look_block">
+        <p>Смотрите также:</p>
+    </div>
+    <div class="also_look_block">
+        <ul class="also_look_list">
+            <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Одежда</a></li>
+            <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Трикотаж</a></li>
+            <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Шелк</a></li>
+            <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Все товары бренда Phillip Plein</a></li>
+            <li class="also_look_item"><a href="#" class="also_look_link lighter_underline"></a></li>
+        </ul>
+    </div>
+</section>
+<section class="helper">
+    <div class="container">
+        <div class="row">
+        <div class="helper_block hidden-xs col-sm-4">
+                <h3 class="helper_title">Ценность</h3>
+                <p class="helper_description">Мы предлагаем подлинные качественные товары люксовых брендов по доступным ценам</p>
+            </div>
+            <div class="helper_block hidden-xs col-sm-4">
+                <h3 class="helper_title">Доставка</h3>
+                <p class="helper_description">Вы можете примерить вещи в одном из наших бутиков или заказать доставку по любому удобному адресу</p>
+            </div>
+            <div class="helper_block hidden-xs col-sm-4">
+                <h3 class="helper_title">Помощь</h3>
+                <p class="helper_description">Время работы службы поддержки: <br> ежедневно с 10:00 до 21:00. <br>+38 044 359-08-99, +38 095 458-98-46 </p>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="footer_block col-sm-3 hidden-xs text-uppercase">
+                <h4 class="footer_block_title">Каталог</h4>
+                <ul class="footer_block_list">
+                    <li class="footer_block_item"><a href="#">Женщинам</a></li>
+                    <li class="footer_block_item"><a href="#">Мужчинам</a></li>
+                    <li class="footer_block_item"><a href="#">Детям</a></li>
+                    <li class="footer_block_item"><a href="#">Для дома</a></li>
+                    <li class="footer_block_item"><a href="#">Бренды</a></li>
+                </ul>
+            </div>
+            <div class="footer_block col-sm-3 hidden-xs">
+                <h4 class="footer_block_title">Покупателям</h4>
+                <ul class="footer_block_list">
+                    <li class="footer_block_item"><a href="#">Оплата</a></li>
+                    <li class="footer_block_item"><a href="#">Возврат</a></li>
+                    <li class="footer_block_item"><a href="#">Доставка</a></li>
+                    <li class="footer_block_item"><a href="#">Оферта</a></li>
+                    <li class="footer_block_item"><a href="#">Поддержка</a></li>
+                </ul>
+            </div>
+            <div class="footer_block col-sm-3 hidden-xs">
+                <h4 class="footer_block_title">О нас</h4>
+                <ul class="footer_block_list">
+                    <li class="footer_block_item"><a href="#">О проекте</a></li>
+                    <li class="footer_block_item"><a href="#">Вакансии</a></li>
+                    <li class="footer_block_item"><a href="#">Партнёрам</a></li>
+                    <li class="footer_block_item"><a href="#">Контакты</a></li>
+                    <li class="footer_block_item"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer_block col-sm-3">
+                <div class="footer_logo-wrapper"><img src="img/logo-footer.svg" alt=""></div>
+                <div class="copyrights">
+                    <copyright > © 2016 One Club 2.0 <br> All Right reserved</copyright>
+                </div>
+                <div class="container">
+                   <div class="row">
+                       <div class="col-xs-3"><img src="img/footer/follow-fb.png" alt="" class="block_img_follow"></div>
+                       <div class="col-xs-3"><img src="img/footer/follow-inst.png" alt="" class="block_img_follow"></div>
+                       <div class="col-xs-3"><img src="img/footer/follow-twitter.png" alt="" class="block_img_follow"></div>
+                       <div class="col-xs-3"><img src="img/footer/follow-pint.png" alt="" class="block_img_follow"></div>
+                   </div>
+                   <div class="row">
+                       <div class="col-xs-4"><img src="img/footer/pay-visa.png" alt="" class="block_img_pay"></div>
+                       <div class="col-xs-4"><img src="img/footer/pay-mastercard.png" alt="" class="block_img_pay"></div>
+                       <div class="col-xs-4"><img src="img/footer/pay-liqpay.png" alt="" class="block_img_pay"></div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/owl.carousel.min.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!-- owl-carousel styles-->
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-    </script>
+
+
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+</script>
 </body>
 </html>

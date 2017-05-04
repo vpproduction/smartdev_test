@@ -90,26 +90,190 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
-
+ul {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+.lighter_underline {
+       color: #999999;
+         border-bottom: 1px dotted #999999; 
+}
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+/*===============HEADER===*/
+header {
+    background-color: #000;
+}
+.header_top {
+    height: 80px;
+}
+.logo-wrap {
+    width: 170px;
+    height: 22px;
+}
+.header_top {
+    position: relative;
+}
+.open_basket {
+    position: absolute;
+    right: 5%;
+    left: auto;
+    top: 20px;
+    width: 32px;
+    height: 32px;
+}
+
+.contact_item {
+    display: inline-block;
+}
+
+.header_icon {
+    width: 31px;
+    margin-right: 4px;
+}
+
+/*Owl carousel cusomization*/
+.owl-theme .owl-dots .owl-dot  span{
+    background-color: rgba(222,222,222,1);
+    width: 7px;
+    height: 7px;
+}
+.owl-theme .owl-dots .owl-dot.active  span{
+    background-color: rgba(246,130,53,1);
+    width: 8px;
+    height: 8px;
+}
+/*ITEM CONFIGURATION*/
+/*=========COLOR*/
+.item_color {
+    display: inline-block;
+}
+.color_all {
+    display: inherit;
+}
+
+.item_color .color_all span {
+    display: inline-block;
+    width: 32px;
+    height: 35px;
+    margin-right: 10px;
+}
+.item_color:nth-child(1) .color_all span {
+    background-color: #636363;
+}
+.item_color:nth-child(2) .color_all span {
+    background-color: #0a0c44;
+}
+.item_color:nth-child(3) .color_all span {
+    background-color: #ffc66d;
+}
+.item_color:nth-child(4) .color_all span {
+    background-color: #b30016;
+}
+.item_color:nth-child(5) .color_all span {
+    background-color: #abc850;
+}
+
+.item_color .color_all.active span {
+   outline: 2px solid rgba(246,130,53,1);
+}
+
+/*=========SIZE*/
+.item_size_toggle p ~ {
+    display: inline-block;
+}
+.item_size_toggle .item_popup span{
+    color: #999999;
+    padding-right: 0;
+    padding-left: auto;
+    border-bottom: 1px dotted #999999; 
+}
+
+.item_size {
+    display: inline-block;
+}
+
+.item_size .size_all{
+    display: block;
+    width: 33px;
+    height: 34px;
+    outline: 1px solid #ccc;
+    text-align: center;
+    margin-right: 10px;
+    color: #000;
+   
+}
+.item_size .size_all.active {
+    outline: 2px solid rgba(246,130,53,1);
+}
+.item_size .unavailable {
+    background-color: #dedede;
+}
+.item_size .size_all span {
+    vertical-align: middle;
+    line-height: 34px;
+}
+
+.fitit_text img {
+    margin-left: 8px;
+}
+
+/*=========VALUE*/
+
+.item_amount .amount {
+    width: 42px;
+    height: 42px;
+    text-align: center;
+}
+
+.item_aount_caution {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.item_toaction {
+    display: inline-block;
+}
+.item_tolike {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    outline: 1px solid #dedede;
+    text-align: center;
+}
+
+.item_tobasket {
+    width: 205px;
+    height: 40px;
+    background-color: #f68235;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.tobasket_text {
+    line-height: 40px;
+    margin-left: 8px;
+}
+
+/*=========ORDER ITEM*/
+
+.order_call span {
+    margin:0 10px;
+    color: #999999;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*===============FOOTER===*/
+footer {
+    background-color: #000;
+}
+.footer_block_title {
+    text-transform: uppercase;
+}
 
 /* ==========================================================================
    Helper classes
