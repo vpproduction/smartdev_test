@@ -14,6 +14,13 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+
+}
+body, html {
+    min-height: 100%;
+    font-family: "HelveticaNeueCyr", sans-serif;
+    font-size: 12px;
+
 }
 
 /*
@@ -95,37 +102,146 @@ ul {
     margin: 0;
     padding: 0;
 }
-.lighter_underline {
-       color: #999999;
-         border-bottom: 1px dotted #999999; 
+a {
+    color: #fff;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight:600;
 }
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 /*===============HEADER===*/
+/*============================HEDAER_TOP*/
 header {
     background-color: #000;
+    margin: 0 auto;
 }
+
 .header_top {
+    position: relative;
     height: 80px;
+    margin: 0;
 }
 .logo-wrap {
     width: 170px;
     height: 22px;
+    margin: 0 auto;
+    float: none;
+    padding-top: 29px;
 }
-.header_top {
-    position: relative;
+.hamburger {
+    position: absolute;
+    z-index: 2;
+    left:7.5%;
+    right: auto;
+    top: 14px;
+    padding-left: 0;
+}
+.hamburger:focus {
+    outline: none;
+}
+.hamburger-inner,.hamburger-inner:before, .hamburger-inner:after  {  
+    background-color: #f68235;
+    width: 24px;
+    height: 3px;
+}
+
+
+#mobile_menu {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top:60px;
+    left:0;
+    width: 100%;
+
+    height: -webkit-calc(100vh-60px);
+    height: calc(100vh-60px);
+    color: #fff;
+    background-color: #000;
 }
 .open_basket {
     position: absolute;
-    right: 5%;
+    right: 7.5%;
     left: auto;
-    top: 20px;
-    width: 32px;
-    height: 32px;
+    top: 29px;
+    width: 18px;
+    height: 22px;
+}
+/*CONTACT for mobile*/
+.mobile_menu {
+    margin:0;
+}
+.mobile_menu_item {
+    display: block;
+    padding: 0.75em 50px;
+}
+.mobile_contact_list {
+    margin-top: 1.5em;
+}
+.mobile_contact_item {
+    margin-left: 50px;
+}
+.mobile_contact_item.mobile_phones {
+    display: block;
+    margin-top:1em;
+    margin-bottom: 2em;
+
+}
+.mobile_contact_item.mobile_phones>span,#mobile_phone_list .phone_number {
+    margin-left: 40px;
 }
 
+.search-wrapper {
+    position: relative;
+    width: 175px;
+    margin-left: 50px;
+}
+.mobile_search {
+    background-color: transparent;
+    outline: 1px solid #fff;
+    border: none;
+}
+.mobile_search::-webkit-input-placeholder {
+    padding-left: 1em;
+}
+.mobile_search::-moz-placeholder {
+    padding-left: 1em;
+}
+.mobile_search:-ms-input-placeholder {
+    padding-left: 1em;
+}
+.mobile_search::placeholder {
+    padding: 0.5em;
+    color: #fff;
+}
+.mobile_search:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+.mobile_search:focus::-moz-placeholder {
+    opacity: 0;
+}
+.mobile_search:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+.mobile_search:focus::placeholder {
+    opacity: 0;
+}
+.mobile_search_img {
+    position: absolute;
+    top:20%;
+    right: 5%;
+    left:auto;
+    z-index: 105;
+}
+
+
+
+
+/*CONTACT for desktop*/
 .contact_item {
     display: inline-block;
 }
@@ -135,6 +251,69 @@ header {
     margin-right: 4px;
 }
 
+/*============================HEDAER_BOTTOM*/
+.header_bottom {
+    height: 46px;
+}
+.catalog-toggle {
+    width: 300px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    float: none;
+
+    background: transparent url(../img/header/catalog_toggle.png) center center;
+    background-size: cover;
+}
+.catalog_link {
+    display: inline-block;
+    text-transform: uppercase;
+     font-weight: 300;
+     font-size: 1.166rem;
+}
+.catalog_link.discount {
+    float: left;
+    margin-left: 27px;
+    margin-top: 10px;
+    line-height: 36px;
+    color: #000;
+}
+
+.discount .toggle_img {
+    vertical-align: middle;
+    margin-right:8px;
+}
+.catalog_link.catalog {
+     float: right;
+    margin-right: 52px;
+    margin-left:auto;
+    
+    line-height: 46px;
+    color: #fff;
+}
+
+
+
+
+
+
+/*SECTION CONTENT*/
+.card_content {
+    width: 95%;
+    margin: 0 auto;
+}
+/*Breadcrumbs*/
+
+.breadcrumb {
+    background: #fff;
+}
+.breadcrumb-item {
+    color: #f68235;
+} 
+/*SLIDER*/
+.card-slider {
+    margin-bottom: 20px;
+}
 /*Owl carousel cusomization*/
 .owl-theme .owl-dots .owl-dot  span{
     background-color: rgba(222,222,222,1);
@@ -147,74 +326,134 @@ header {
     height: 8px;
 }
 /*ITEM CONFIGURATION*/
-/*=========COLOR*/
-.item_color {
-    display: inline-block;
+hr.hr_this {
+    max-width: 260px;
 }
-.color_all {
-    display: inherit;
+.card_configuration {
+    margin: 0 auto;
+    padding: 0;
+    float: none;
+}
+.card_configuration>[class*=item] {
+    max-width: 260px;
+}
+.item_name,.item_about,.price>span:first-child {
+    font-size: 1.166rem;
+}
+.item_price {
+    height: 61px;
+    margin-top: 22px;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-top:5px;
+    background-color: #ededed;
+}
+.price {
+        padding-right: 0;
+}
+.price>span:first-child {
+    color: #999999;
+    text-decoration: line-through;
+}
+.price>span:nth-child(3) {
+    color: #f68235;
+    font-size: 2rem;
+}
+.item_discount {
+    text-align: right;
+    padding-right:20px;
+}
+/*=========COLOR*/
+.item_color_toggle {
+    margin-top: 20px;
+}
+.item_color_pallete {
+    margin-top: 2px;
+    margin-bottom: 21px;
 }
 
-.item_color .color_all span {
+.item_color {
     display: inline-block;
     width: 32px;
     height: 35px;
     margin-right: 10px;
+    padding: 0;
+    border: none;
 }
-.item_color:nth-child(1) .color_all span {
+.item_color:nth-child(1) {
     background-color: #636363;
 }
-.item_color:nth-child(2) .color_all span {
+.item_color:nth-child(2)  {
     background-color: #0a0c44;
 }
-.item_color:nth-child(3) .color_all span {
+.item_color:nth-child(3)  {
     background-color: #ffc66d;
 }
-.item_color:nth-child(4) .color_all span {
+.item_color:nth-child(4)  {
     background-color: #b30016;
 }
-.item_color:nth-child(5) .color_all span {
+.item_color:nth-child(5)  {
     background-color: #abc850;
 }
 
-.item_color .color_all.active span {
-   outline: 2px solid rgba(246,130,53,1);
+.item_color:focus {
+   border: 2px solid rgba(246,130,53,1);
+   outline: none;   
+   -webkit-transform:translateY(-2px);
+       -ms-transform:translateY(-2px);
+           transform:translateY(-2px);
 }
 
 /*=========SIZE*/
+.item_size_toggle {
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
 .item_size_toggle p ~ {
     display: inline-block;
 }
+
 .item_size_toggle .item_popup span{
     color: #999999;
     padding-right: 0;
     padding-left: auto;
     border-bottom: 1px dotted #999999; 
 }
+.item_size_pallete {
+    margin-bottom: 12px;
+}
+.sizeit_text .item_popup span {
+    float: right;
+} 
 
 .item_size {
     display: inline-block;
 }
 
-.item_size .size_all{
-    display: block;
+.item_size.size_all{
+    display: inline-block;
     width: 33px;
-    height: 34px;
-    outline: 1px solid #ccc;
+    height: 35px;
     text-align: center;
     margin-right: 10px;
+    border: 1px solid #cccccc;
+    background-color: #fff;
     color: #000;
    
 }
-.item_size .size_all.active {
-    outline: 2px solid rgba(246,130,53,1);
+.item_size.size_all:focus {
+    border: 2px solid rgba(246,130,53,1);
+    outline: none;
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
 }
-.item_size .unavailable {
+
+.item_size.unavailable {
     background-color: #dedede;
 }
-.item_size .size_all span {
-    vertical-align: middle;
-    line-height: 34px;
+.item_size.unavailable:focus {
+    border-color:#999;
 }
 
 .fitit_text img {
@@ -278,7 +517,11 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
+/*make text gey and underline*/
+.lighter_underline {
+       color: #999999;
+         border-bottom: 1px dotted #999999; 
+}
 /*
  * Hide visually and from screen readers
  */
@@ -355,8 +598,14 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+   .logo-wrap {
+    float: left;
+   }
+   .card_configuration {
+
+    float: left;
+}
 }
 
 @media print,

@@ -42,8 +42,23 @@ $(document).ready(function() {
               }
             });
           });
+ });
+//Hamburger
 
-        });
+          $('.hamburger').on('click', function() {
+            $('#mobile_menu').slideToggle(200,function() {
+                if($(this).css('display')==='none') {
+                    $(this).removeAttr('style');
+                }
+            });
+          });
+           $( ".hamburger" ).click(function() {
+  $( this ).toggleClass( "is-active" );
+});
+
+
+
+       
 
 //Owl-carousel 
 

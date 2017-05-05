@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
+    <link href="css/hamburgers.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -34,200 +36,245 @@
             <header id="site_header">
                 <div class="container">
                     <div class="row header_top">
-                        <div class="logo-wrap col-xs-10 center-block col-sm-4">
-                            <a href="#" title="One club butic"><img src="img/logo.svg" alt="one club logo"></a>
-                        </div>
-                        <div class="contact_wrap hidden-xs">
-                            <ul class="contact_list">
-                                <li class="contact_item">
-                                    <a href="tel:+380443590899" class="contact_link"><img src="img/phone.svg" alt="" class="header_icon">+380 44 359-08-99 </a><span> <img href="#phone_list" src="img/arrow-down-orange.png" alt="" class="plus-toggle"></span><br>
-                                    <span>Пн-Вс:9:00-21:00</span>
-                                    <ul  id="phone_list" style="display:none">
-                                        <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
-                                        <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
-                                        <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
-                                    </ul>        
-                                </li>
-                                <li class="contact_item"><img src="img/person.svg" alt="" class="header_icon"><a href="#" class="contact_link">Войти</a></li>
-                                <li class="contact_item"><img src="img/basket.svg" alt="" class="header_icon"><a href="#" class="contact_link">Корзина</a></li>
-                            </ul>
+                        <button class="hamburger hamburger--spring visible-xs"  type="button" href="#mobile_menu">
+                          <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    <div id="mobile_menu" class="nav_menu_mobile hidden-sm hidden-lg" style="display: none;">
 
-                        </div>
-                        <div class="open_basket visible-xs-block"><img src="img/header/bag.png" alt="" class="backet_xs"></div>
-                    </div>
-                    <div class="row header_bottom">
-                        <div class="catalog-toggle center-block col-xs-12 col-sm-5">
-                            <a href="#" class="catalog-link">Акции</a>
-                            <a href="#" class="catalog-link">Каталог</a>
-                        </div>  
-                        <div class="search-wrap hidden-xs col-sm-4 col-sm-offset-3"></div>
-                    </div>
-                    <div class="row hidden-xs">
-                        <nav class="container-fluid">
-                            <div class="row menu">
-                                <div class="menu_item col-sm-2">Женщинам</div>
-                                <div class="menu_item col-sm-2">Мужчинам</div>
-                                <div class="menu_item col-sm-2">Детям</div>
-                                <div class="menu_item col-sm-2">Косметика</div>
-                                <div class="menu_item col-sm-2">Для дома</div>
-                                <div class="menu_item col-sm-2">Бренды</div>
-                            </div>
-                        </nav>
-                    </div>
+                       <form method="post" action="#">
+                        <div class="search-wrapper">
+                           <input type="text" class="mobile_search" name="search"  placeholder="Поиск..." autocomplete="">
+                           <img class="mobile_search_img" src="img/header/search.png" alt="">
+                       </div>
+
+
+                   </form>   
+                   <div class="row mobile_menu">
+                    <div class="mobile_menu_item col-sm-2"><a href="#">Женщинам</a></div>
+                    <div class="mobile_menu_item col-sm-2"><a href="#">Мужчинам</a></div>
+                    <div class="mobile_menu_item col-sm-2"><a href="#">Детям</a></div>
+                    <div class="mobile_menu_item col-sm-2"><a href="#">Косметика</a></div>
+                    <div class="mobile_menu_item col-sm-2"><a href="#">Для дома</a></div>
+                    <div class="mobile_menu_item col-sm-2"><a href="#">Бренды</a></div>
                 </div>
-            </header>
+                <ul class="mobile_contact_list">
 
+                    <li class="mobile_contact_item"><img src="img/person.svg" alt="" class="header_icon"><a href="#" class="contact_link">Войти</a></li>
 
-
-
-
-
-
-
-
-            <section id="content">
-                <div class="container">
-                    <div class="row card_breadcrumbs">
-                        <nav class="breadcrumb">
-                          <a class="breadcrumb-item" href="#">Главная страница</a>
-                          <a class="breadcrumb-item" href="#">Каталог</a>
-                          <a class="breadcrumb-item" href="#">Категория 1</a><br class="visible-xs">
-                          <span class="breadcrumb-item active">Costa Patch Pocket Denim Top</span>
-                      </nav>
-                  </div>
-                  <div class="row card-content">
-                    <div class="card-slider col-xs-12 col-sm-7">
-
-                      <!-- SLIDERs -->
-                      <!-- owl slider for mobile - visible-xs -->
-                      <div class="owl-carousel owl-theme visible-xs">
-                        <div class="item"><a href="#" class="card_item_photo"><img src="img/dress-1.jpg" alt="" class="card_item_img"></a></div>
-                        <div class="item"><a href="#" class="card_item_photo"><img src="img/dress-1.jpg" alt="" class="card_item_img"></a></div>
-                        <div class="item"><a href="#" class="card_item_photo"><img src="img/dress-1.jpg" alt="" class="card_item_img"></a></div>
-                        <div class="item"><a href="#" class="card_item_photo"><img src="img/dress-1.jpg" alt="" class="card_item_img"></a></div>
-                    </div>
-
-                </div>
-                <!-- owl slider for tablets and desktops - hidden-xs -->
-
-                <!-- SLIDERs -->
-                <div class="card-configuration col-xs-12 col-sm-5">
-                    <div class="item_name"><span class="item_name">Current Elliott</span><span class="item_about">Costa Patch Pocket <br class="visible-xs"> Denim Top</span></div>
-                    <div class="row item_price">
-                        <div class="price col-xs-6">
-                            <span>30 000</span>грн. <br class="visible-xs">
-                            <span>15 000</span>грн.
-                        </div>
-                        <div class="discount-col-xs-6">
-                            <img src="img/discount-50.png" alt="50% discount" class="img_discount">
-                        </div>
-                    </div>
-                    <div class="item_color_toggle">
-                        <p><b>Цвет:</b>Синий</p>
-                        <ul class="item_color_pallete">
-                            <li class="item_color"><a href="" class="color_all "><span></span></a></li>
-                            <li class="item_color"><a href="" class="color_all active"><span></span></a></li>
-                            <li class="item_color"><a href="" class="color_all"><span></span></a></li>
-                            <li class="item_color"><a href="" class="color_all"><span></span></a></li>
-                            <li class="item_color"><a href="" class="color_all"><span></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="item_size_toggle">
-                        <p>Размер  <a href="" class="item_popup"><span>Таблица размеров</span></a></p>
-                        <ul class="item_size_pallete">
-                            <li class="item_size"><a href="" class="size_all "><span>XS</span></a></li>
-                            <li class="item_size"><a href="" class="size_all active"><span>S</span></a></li>
-                            <li class="item_size"><a href="" class="size_all unavailable"><span>M</span></a></li>
-                            <li class="item_size"><a href="" class="size_all unavailable"><span>L</span></a></li>
-                            <li class="item_size"><a href="" class="size_all unavailable"><span>XL</span></a></li>
-                        </ul>
-                        <p class="fitit_text"><a href="" class="item_popup"><span>Примерить онлайн</span></a><img src="img/fit_now.jpg" alt=""></p>
-                    </div>
-                    <div class="item_value">
-                        <div class="item_amount">
-                            <a href="#" class="item_amount_decrease">-</a>
-                            <input type="text"  class="amount" value="1" readonly>
-                            <a href="#" class="item_amount_increase">+</a>
-                            <div class="item_aount_caution">
-                                <p>Осталось в наличии: <span>1 шт</span></p><p>Спешите купить сейчас!</p></div>
-                            </div>
-                            <div class="item_action">
-                                <div class="item_toaction item_tolike">
-                                    <img src="img/heart.png" alt="" class="item_like_img"><span class="hidden-xs" >в избранное</span>
-                                </div>
-                                <div class="item_toaction item_tobasket">
-                                    <img src="img/bag.png" alt="" class="tobacket_img"><span class="tobasket_text">Добавить в корзину</span>
-                                </div>
-                            </div>       
-                        </div>
-                        <div class="order_item_title">
-                            <p>
-                                <img src="/img/phone.png" alt="">
-                                <span>Оформить заказ по телефону</span>
-                            </p>
-                            <p class="order_call">
-                                <a href="tel:+380954589846" class="lighter_underline">+38 095 458-98-46</a>
-                                <br class="visible-xs"><span class="hidden-xs">или</span>
-                                <a href="tel:+380443590899" class="lighter_underline">+38 044 359-08-99</a>
-                            </p>
-
-                            <p class="shops">
-                                <img src="/img/loc.png" alt="">
-                                <a class="shop_amount" href="#">
-                                    Наличие в бутиках ONE CLUB
-                                </a>
-                            </p>
-                        </div>
-                        <div class="info_block details_block">
-                            <h2>Описание и детали<span  href="#collapse1" class="plus-toggle">+</span></h2>
-                            <div id="collapse1" style="display:none">
-                                <p><b>Состав:</b>&nbsp;100% трикотаж
-                                </p>
-                                <p><b>Сезон:</b>&nbsp;демисезон</p>
-                                <p><b>Детали:</b>
-                                    <span id="product_description">
-                                       Облегающая модель выполнена из гладкого трикотажа.
-                                   </span>
-                               </p>
-                               <p class="t-code">
-                                Код товара:
-                                <span>
-                                 1234-5678-8765-4321
-                             </span>
-                         </p>
-
-                     </div>
-                 </div>
-                 <div class="info_block measure_block">
-                    <h2>Измерения<span href="#collapse2" class="plus-toggle">+</span></h2>
-                    <div id="collapse2" style="display:none">
-                     <p class="">
-                        <b>Размер вещи на фото:</b>S
-                    </p>
-                    <p class="">Обхват груди: 85см</p>
-                    <p class="">Обхват талии: 61см</p>
-                    <p class="">Обхват бедер: 175см</p>
-                    <p class="">Рост:175см</p><br>
-                    <p><b>Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, <span><a href="#">таблицей размеров</a></span> или обратитесь к нашему консультанту.</b></p> 
-                </div>
-                <div class="info_block delivery_block">
-                    <h2>Доставка и возврат<span href="#collapse3" class="plus-toggle">+</span></h2>
-                    <div id="collapse3" style="display:none">
-                       <p class="padbot padtop visible">
-                        <b>Ожидаемая дата доставки:</b>
-                        21.09.2016 – 23.09.2016
-                    </p>
-                    <p class="padbot visible"><b>Бесплатная доставка при заказе от 2000 грн​, а также при оплате банковской картой.</b></p>
-                    <p class="padbot"><b>Вы можете выбрать любой удобный способ доставки:</b></p>
-                    <p class="padbot">1. Самовывоз из наших бутиков в Киеве (адрес выбирается в момент оформления заказа) — бесплатно.<br>2. Курьером по Киеву.<br>3. Сервисом доставки "Нова пошта" по всей Украине.</p>
-                    <p><b>Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.​</b></p> 
-                </div>
+                    <li class="mobile_contact_item mobile_phones">
+                        <a href="tel:+380443590899" class="contact_link"><img src="img/phone.svg" alt="" class="header_icon">+380 44 359-08-99 </a><span> <img href="#mobile_phone_list" src="img/arrow-down-orange.png" alt="" class="plus-toggle"></span><br>
+                        <span>Пн-Вс:9:00-21:00</span>
+                        <ul  id="mobile_phone_list" style="display:none">
+                            <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
+                            <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
+                            <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
+                        </ul>        
+                    </li>
+                </ul>
             </div>
+            <div class="logo-wrap col-xs-10 center-block col-sm-4">
+                <a href="#" title="One club butic"><img src="img/logo.svg" alt="one club logo"></a>
+            </div>
+            <div class="open_basket visible-xs-block"><a href="#"><img src="img/header/bag.png" alt="" class="backet_xs"></a></div>
+
+            <div class="contact_wrap hidden-xs">
+                <ul class="contact_list">
+                    <li class="contact_item">
+                        <a href="tel:+380443590899" class="contact_link"><img src="img/phone.svg" alt="" class="header_icon">+380 44 359-08-99 </a><span> <img href="#phone_list" src="img/arrow-down-orange.png" alt="" class="plus-toggle"></span><br>
+                        <span>Пн-Вс:9:00-21:00</span>
+                        <ul  id="phone_list" style="display:none">
+                            <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
+                            <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
+                            <li class="phone_number"><a href="tel:+380000000000">+380 00 000-000-00</a></li>
+                        </ul>        
+                    </li>
+                    <li class="contact_item"><img src="img/person.svg" alt="" class="header_icon"><a href="#" class="contact_link">Войти</a></li>
+                    <li class="contact_item"><img src="img/basket.svg" alt="" class="header_icon"><a href="#" class="contact_link">Корзина</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="row header_bottom">
+            <div class="catalog-toggle center-block col-xs-12 col-sm-5">
+                <a href="#" class="catalog_link discount"><span><img src="img/header/clock.png" alt="" class="toggle_img"></span>Акции</a>
+                <a href="#" class="catalog_link catalog"><span></span>Каталог</a>
+            </div>  
+            <div class="search-wrap hidden-xs col-sm-4 col-sm-offset-3"></div>
+        </div>
+        <div class="row hidden-xs">
+            <nav class="container">
+                <div class="row menu">
+                    <div class="menu_item col-sm-2">Женщинам</div>
+                    <div class="menu_item col-sm-2">Мужчинам</div>
+                    <div class="menu_item col-sm-2">Детям</div>
+                    <div class="menu_item col-sm-2">Косметика</div>
+                    <div class="menu_item col-sm-2">Для дома</div>
+                    <div class="menu_item col-sm-2">Бренды</div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+<section id="content">
+    <div class="container">
+        <div class="row card_breadcrumbs">
+            <nav class="breadcrumb">
+              <a class="breadcrumb-item" href="#">Главная страница&nbsp;<span style="color:#000;">/</span></a>
+              <a class="breadcrumb-item" href="#">Каталог&nbsp;<span style="color:#000;">/</span></a>
+              <a class="breadcrumb-item" href="#">Категория&nbsp;1&nbsp;<span style="color:#000;">/</span></a><br class="visible-xs">
+              <span class="breadcrumb-item active">Costa Patch Pocket Denim Top</span>
+          </nav>
+      </div>
+      <div class="row card_content">
+        <div class="card-slider col-xs-12 col-sm-7">
+
+          <!-- SLIDERs -->
+          <!-- owl slider for mobile - visible-xs -->
+          <div class="owl-carousel owl-theme visible-xs">
+            <div class="item"><a href="#" class="card_item_photo"><img src="img/header/dress-1.jpg" alt="" class="card_item_img"></a></div>
+            <div class="item"><a href="#" class="card_item_photo"><img src="img/header/dress-1.jpg" alt="" class="card_item_img"></a></div>
+            <div class="item"><a href="#" class="card_item_photo"><img src="img/header/dress-1.jpg" alt="" class="card_item_img"></a></div>
+            <div class="item"><a href="#" class="card_item_photo"><img src="img/header/dress-1.jpg" alt="" class="card_item_img"></a></div>
         </div>
 
     </div>
+    <!-- owl slider for tablets and desktops - hidden-xs -->
+
+    <!-- SLIDERs -->
+    <div class="card_configuration col-xs-12 col-sm-5">
+        <h2 class="item_title"><span class="item_name">Current Elliott</h2><span class="item_about">Costa Patch Pocket <br class="visible-xs"> Denim Top</span>
+        <div class="row item_price">
+            <div class="price col-xs-6 col-sm-9">
+                <span>30 000 грн.</span> <br class="visible-xs">
+                <span>15 000 грн.</span>
+            </div>
+            <div class="item_discount col-xs-6 col-sm-3">
+                <img src="img/discount-50.png" alt="50% discount" class="img_discount">
+            </div>
+        </div>
+        <div class="item_color_toggle">
+            <p><b>Цвет:</b>Синий</p>
+            <form class="item_color_pallete">
+                <button type="button" class="item_color"></button>
+                <button type="button" class="item_color"></button>
+                <button type="button" class="item_color"></button>
+                <button type="button" class="item_color"></button>
+                <button type="button" class="item_color"></button>
+            </form>
+            <hr class="hr_this">
+        </div>
+        <div class="item_size_toggle">
+            <p class="sizeit_text">Размер  <a href="" class="item_popup"><span>Таблица размеров</span></a></p>
+            <form class="item_size_pallete">
+                <button type="button" class="item_size size_all">S</button>
+                <button type="button" class="item_size size_all">XS</button>
+                <button type="button" class="item_size size_all unavailable">M</button>
+                <button type="button" class="item_size size_all unavailable">L</button>
+                <button type="button" class="item_size size_all unavailable">XL</button>
+            </form>
+            <p class="fitit_text"><a href="" class="item_popup"><span>Примерить онлайн</span></a><img src="img/fit_now.jpg" alt=""></p>
+        </div>
+         <hr class="hr_this">
+        <div class="item_value">
+            <div class="item_amount">
+                <a href="#" class="item_amount_decrease">-</a>
+                <input type="text"  class="amount" value="1" readonly>
+                <a href="#" class="item_amount_increase">+</a>
+                <div class="item_aount_caution">
+                    <p>Осталось в наличии: <span>1 шт</span></p><p>Спешите купить сейчас!</p></div>
+                </div>
+                <div class="item_action">
+                    <div class="item_toaction item_tolike">
+                        <img src="img/heart.png" alt="" class="item_like_img"><span class="hidden-xs" >в избранное</span>
+                    </div>
+                    <div class="item_toaction item_tobasket">
+                        <img src="img/bag.png" alt="" class="tobacket_img"><span class="tobasket_text">Добавить в корзину</span>
+                    </div>
+                </div>       
+            </div>
+            <div class="order_item_title">
+                <p>
+                    <img src="/img/phone.png" alt="">
+                    <span>Оформить заказ по телефону</span>
+                </p>
+                <p class="order_call">
+                    <a href="tel:+380954589846" class="lighter_underline">+38 095 458-98-46</a>
+                    <br class="visible-xs"><span class="hidden-xs">или</span>
+                    <a href="tel:+380443590899" class="lighter_underline">+38 044 359-08-99</a>
+                </p>
+
+                <p class="shops">
+                    <img src="/img/loc.png" alt="">
+                    <a class="shop_amount" href="#">
+                        Наличие в бутиках ONE CLUB
+                    </a>
+                </p>
+            </div>
+            <div class="item_block_info details_block">
+                <h2>Описание и детали<span  href="#collapse1" class="plus-toggle">+</span></h2>
+                <div id="collapse1" style="display:none">
+                    <p><b>Состав:</b>&nbsp;100% трикотаж</p>
+                    <p><b>Сезон:</b>&nbsp;демисезон</p>
+                    <p><b>Детали:</b>
+                        <span id="product_description">
+                         Облегающая модель выполнена из гладкого трикотажа.
+                     </span>
+                 </p>
+                 <p class="t-code">
+                    Код товара:
+                    <span>
+                       1234-5678-8765-4321
+                   </span>
+               </p>
+
+           </div>
+       </div>
+       <div class="item_block_info measure_block">
+        <h2>Измерения<span href="#collapse2" class="plus-toggle">+</span></h2>
+        <div id="collapse2" style="display:none">
+           <p class="">
+            <b>Размер вещи на фото:</b>S
+        </p>
+        <p class="">Обхват груди: 85см</p>
+        <p class="">Обхват талии: 61см</p>
+        <p class="">Обхват бедер: 175см</p>
+        <p class="">Рост:175см</p><br>
+        <p><b>Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, <span><a href="#">таблицей размеров</a></span> или обратитесь к нашему консультанту.</b></p> 
+    </div>
+    </div>
+    <div class="item_block_info delivery_block">
+        <h2>Доставка и возврат<span href="#collapse3" class="plus-toggle">+</span></h2>
+        <div id="collapse3" style="display:none">
+         <p class="padbot padtop visible">
+            <b>Ожидаемая дата доставки:</b>
+            21.09.2016 – 23.09.2016
+        </p>
+        <p class="padbot visible"><b>Бесплатная доставка при заказе от 2000 грн​, а также при оплате банковской картой.</b></p>
+        <p class="padbot"><b>Вы можете выбрать любой удобный способ доставки:</b></p>
+        <p class="padbot">1. Самовывоз из наших бутиков в Киеве (адрес выбирается в момент оформления заказа) — бесплатно.<br>2. Курьером по Киеву.<br>3. Сервисом доставки "Нова пошта" по всей Украине.</p>
+        <p><b>Если товар не подошел, Вы можете вернуть его в течение 14 дней с момента получения.​</b></p> 
+    </div>
 </div>
-<div class="row another_goods visible-xs-block">
+</div>
+
+
+</div>
+<div class="another_goods_wrapper">
+    <h2>Похожие товары<span href="#collapse4" class="plus-toggle">+</span></h2>
+</div>
+<div class="row another_goods hidden-sm hidden-lg" id="collapse4" style="display: none;">
     <div class="col-xs-6 product-wrapper">
         <div class="product_photo-wrapper">
             <img src="img/good1.png" alt="" class="product_photo">
@@ -295,7 +342,7 @@
 <section class="another_goods hidden-xs">
     <h2 class="goots_title"></h2>
     <div class="goods-wrapper row">
-     <div class="col-xs-3 product-wrapper">
+       <div class="col-xs-3 product-wrapper">
         <div class="product_photo-wrapper">
             <img src="img/item-other.jpg" alt="" class="product_photo">
             <div class="product_description">
@@ -354,7 +401,7 @@
 <section class="helper">
     <div class="container">
         <div class="row">
-        <div class="helper_block hidden-xs col-sm-4">
+            <div class="helper_block hidden-xs col-sm-4">
                 <h3 class="helper_title">Ценность</h3>
                 <p class="helper_description">Мы предлагаем подлинные качественные товары люксовых брендов по доступным ценам</p>
             </div>
@@ -409,22 +456,22 @@
                 <div class="copyrights">
                     <copyright > © 2016 One Club 2.0 <br> All Right reserved</copyright>
                 </div>
-                <div class="container">
-                   <div class="row">
-                       <div class="col-xs-3"><img src="img/footer/follow-fb.png" alt="" class="block_img_follow"></div>
-                       <div class="col-xs-3"><img src="img/footer/follow-inst.png" alt="" class="block_img_follow"></div>
-                       <div class="col-xs-3"><img src="img/footer/follow-twitter.png" alt="" class="block_img_follow"></div>
-                       <div class="col-xs-3"><img src="img/footer/follow-pint.png" alt="" class="block_img_follow"></div>
-                   </div>
-                   <div class="row">
-                       <div class="col-xs-4"><img src="img/footer/pay-visa.png" alt="" class="block_img_pay"></div>
-                       <div class="col-xs-4"><img src="img/footer/pay-mastercard.png" alt="" class="block_img_pay"></div>
-                       <div class="col-xs-4"><img src="img/footer/pay-liqpay.png" alt="" class="block_img_pay"></div>
-                   </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                
+                <div class="row">
+                 <div class="col-xs-3"><img src="img/footer/follow-fb.png" alt="" class="block_img_follow"></div>
+                 <div class="col-xs-3"><img src="img/footer/follow-inst.png" alt="" class="block_img_follow"></div>
+                 <div class="col-xs-3"><img src="img/footer/follow-twitter.png" alt="" class="block_img_follow"></div>
+                 <div class="col-xs-3"><img src="img/footer/follow-pint.png" alt="" class="block_img_follow"></div>
+             </div>
+             <div class="row">
+                 <div class="col-xs-4"><img src="img/footer/pay-visa.png" alt="" class="block_img_pay"></div>
+                 <div class="col-xs-4"><img src="img/footer/pay-mastercard.png" alt="" class="block_img_pay"></div>
+                 <div class="col-xs-4"><img src="img/footer/pay-liqpay.png" alt="" class="block_img_pay"></div>
+             </div>
+
+         </div>
+     </div>
+ </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
