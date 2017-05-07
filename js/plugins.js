@@ -38,7 +38,7 @@ $(document).ready(function() {
                 toggle_switch.html('+');
               }else{
                                 //change the button label to be 'Hide'
-                toggle_switch.html('-');
+                toggle_switch.html('&ndash;');
               }
             });
           });

@@ -10,7 +10,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+   html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
@@ -31,13 +31,13 @@ body, html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
-    background: #f68235;
+ ::-moz-selection {
+    background: rgba(246,130,53,0.5);
     text-shadow: none;
 }
 
 ::selection {
-    background: #f68235;
+    background: rgba(246,130,53,0.5);
     text-shadow: none;
 }
 
@@ -45,7 +45,7 @@ body, html {
  * A better looking default horizontal rule
  */
 
-hr {
+ hr {
     display: block;
     height: 1px;
     border: 0;
@@ -60,12 +60,12 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+ audio,
+ canvas,
+ iframe,
+ img,
+ svg,
+ video {
     vertical-align: middle;
 }
 
@@ -73,7 +73,7 @@ video {
  * Remove default fieldset styles.
  */
 
-fieldset {
+ fieldset {
     border: 0;
     margin: 0;
     padding: 0;
@@ -83,7 +83,7 @@ fieldset {
  * Allow only vertical resizing of textareas.
  */
 
-textarea {
+ textarea {
     resize: vertical;
 }
 
@@ -91,7 +91,7 @@ textarea {
    Browser Upgrade Prompt
    ========================================================================== */
 
-.browserupgrade {
+   .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
@@ -107,15 +107,18 @@ a {
 }
 h2 {
     font-size: 1.5rem;
-    font-weight:600;
+    font-weight:400;
+}
+h3 {
+    font-size: 1.366rem;
 }
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-/*===============HEADER===*/
-/*============================HEDAER_TOP*/
-header {
+   /*===============HEADER===*/
+   /*============================HEDAER_TOP*/
+   header {
     background-color: #000;
     margin: 0 auto;
 }
@@ -126,7 +129,7 @@ header {
     margin: 0;
 }
 .logo-wrap {
-    width: 170px;
+    max-width: 170px;
     height: 22px;
     margin: 0 auto;
     float: none;
@@ -195,12 +198,12 @@ header {
     margin-left: 40px;
 }
 
-.search-wrapper {
+.mobile_search_wrapper {
     position: relative;
-    width: 175px;
+    width: 130px;
     margin-left: 50px;
 }
-.mobile_search {
+.mobile_search, .desktop_search_input {
     background-color: transparent;
     outline: 1px solid #fff;
     border: none;
@@ -232,14 +235,11 @@ header {
 }
 .mobile_search_img {
     position: absolute;
-    top:20%;
+    top:15%;
     right: 5%;
     left:auto;
     z-index: 105;
 }
-
-
-
 
 /*CONTACT for desktop*/
 .contact_item {
@@ -256,7 +256,7 @@ header {
     height: 46px;
 }
 .catalog-toggle {
-    width: 300px;
+    max-width: 300px;
     height: 100%;
     margin: 0 auto;
     padding: 0;
@@ -268,8 +268,8 @@ header {
 .catalog_link {
     display: inline-block;
     text-transform: uppercase;
-     font-weight: 300;
-     font-size: 1.166rem;
+    font-weight: 300;
+    font-size: 1.166rem;
 }
 .catalog_link.discount {
     float: left;
@@ -284,12 +284,12 @@ header {
     margin-right:8px;
 }
 .catalog_link.catalog {
-     float: right;
-    margin-right: 52px;
-    margin-left:auto;
-    
-    line-height: 46px;
-    color: #fff;
+   float: right;
+   margin-right: 52px;
+   margin-left:auto;
+
+   line-height: 46px;
+   color: #fff;
 }
 
 
@@ -299,7 +299,7 @@ header {
 
 /*SECTION CONTENT*/
 .card_content {
-    width: 95%;
+    width: 96%;
     margin: 0 auto;
 }
 /*Breadcrumbs*/
@@ -326,30 +326,54 @@ header {
     height: 8px;
 }
 /*ITEM CONFIGURATION*/
-hr.hr_this {
-    max-width: 260px;
+.item_block_info h2 {
+    margin-top: 22px;
+    margin-bottom: 22px
 }
+
+.item_block_info .plus-toggle, .another_goods_wrapper .plus-toggle {
+    float: right;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 2rem;
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+.block_content_wrapper {
+    margin-bottom: 22px;
+}
+
+/*==========*/
+
 .card_configuration {
     margin: 0 auto;
     padding: 0;
     float: none;
 }
-.card_configuration>[class*=item] {
-    max-width: 260px;
+.card_configuration>[class*=item]:nth(.item_price) {
+    max-width: 86.667vw;
 }
 .item_name,.item_about,.price>span:first-child {
     font-size: 1.166rem;
 }
+.item_name {
+    font-weight: 500;
+}
+.item_price_wrapper {
+    margin-right: -20px;
+    margin-left: -20px;
+}
 .item_price {
     height: 61px;
+    min-width: 100%;
     margin-top: 22px;
-    margin-right: -15px;
-    margin-left: -15px;
-    padding-top:5px;
+    padding-top:8px;
     background-color: #ededed;
 }
 .price {
-        padding-right: 0;
+    padding-right: 0;
 }
 .price>span:first-child {
     color: #999999;
@@ -361,7 +385,7 @@ hr.hr_this {
 }
 .item_discount {
     text-align: right;
-    padding-right:20px;
+    padding-right:10px;
 }
 /*=========COLOR*/
 .item_color_toggle {
@@ -397,20 +421,18 @@ hr.hr_this {
 }
 
 .item_color:focus {
-   border: 2px solid rgba(246,130,53,1);
-   outline: none;   
-   -webkit-transform:translateY(-2px);
-       -ms-transform:translateY(-2px);
-           transform:translateY(-2px);
+ border: 2px solid rgba(246,130,53,1);
+ outline: none;   
+ -webkit-transform:translateY(-2px);
+ -ms-transform:translateY(-2px);
+ transform:translateY(-2px);
 }
 
 /*=========SIZE*/
 .item_size_toggle {
+
     margin-top: 12px;
     margin-bottom: 30px;
-}
-.item_size_toggle p ~ {
-    display: inline-block;
 }
 
 .item_size_toggle .item_popup span{
@@ -439,14 +461,14 @@ hr.hr_this {
     border: 1px solid #cccccc;
     background-color: #fff;
     color: #000;
-   
+
 }
 .item_size.size_all:focus {
     border: 2px solid rgba(246,130,53,1);
     outline: none;
     -webkit-transform: translateY(-2px);
-        -ms-transform: translateY(-2px);
-            transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
 .item_size.unavailable {
@@ -462,71 +484,287 @@ hr.hr_this {
 
 /*=========VALUE*/
 
-.item_amount .amount {
+.item_amount {
+    margin-top: 25px;
+    margin-bottom: 22px;
+}
+#item_amount_decrease,#item_amount_increase {
+    color: #000;
+    font-size: 2rem;   
+}
+.item_amount_output {
     width: 42px;
     height: 42px;
+    margin-right: 8px;
+    margin-left: 8px;
+    border: 1px solid #dedede;
     text-align: center;
 }
 
-.item_aount_caution {
+.item_amount>[class*=item] {
     display: inline-block;
-    line-height: 1em;
 }
 
 .item_toaction {
     display: inline-block;
+    position: relative;
+    margin-bottom: 19px;
+}
+.item_amount_caution {
+   position: absolute;
+   bottom:66px;
+   right: 0%;
+   left: auto;
+   width: 166px;
+   height: 45px;
+   background-color: #eaeaea;
+   padding-top: 6px;
+   line-height: 1.4em;
+   vertical-align: middle;
+   text-align: center;
+   white-space: nowrap;
+   text-transform: none;
+   color: #000;
+}
+.item_amount_caution p {
+    margin-bottom: 0;
+}
+.item_amount_caution:after {
+    position: absolute;
+    content: '';
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #eaeaea;
+    bottom: -5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 .item_tolike {
-    width: 40px;
-    height: 40px;
+    width: 41px;
+    height: 41px;
+    margin-right: 13px;
     line-height: 40px;
-    outline: 1px solid #dedede;
+    border: 1px solid #dedede;
     text-align: center;
 }
 
 .item_tobasket {
     width: 205px;
     height: 40px;
+    float: right;
     background-color: #f68235;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
     vertical-align: middle;
+    line-height: 40px;
 }
 .tobasket_text {
-    line-height: 40px;
+
     margin-left: 8px;
 }
 
 /*=========ORDER ITEM*/
-
+.order_item_title {
+    margin-top: 20px;
+    margin-bottom: 22px;
+}
+.order_call_img {
+    margin-right: 8px;
+}
+.order_call a {
+    margin-left: 28px;
+}
 .order_call span {
     margin:0 10px;
     color: #999999;
 }
+.shops a {
+    color:#000;
+    margin-left: 8px;
+}
 
+/*DETAILS about ITEM*/
+.item_block_info {
+    margin-top: 22px;
+}
+.measure_block a {
+    color: #000;
+    border-bottom: 1px solid rgba(0,0,0,0.6);
+}
+/*Another items*/
 
+.another_goods_wrapper {
+    width: 96%;
+    margin: 0 auto;
+}
+.another_goods {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 11px;
+}
+.another_goods_wrapper + .hr_this,.share_this_wrapper + .hr_this  {
+    width: 96%;
+    margin: 0 auto;
+}
+/* ******tricky with
+"text-align:center+text-align:left" vw rescue*/
+
+.product-wrapper {
+    padding: 0;
+    text-align: center;
+}
+.product_photo-wrapper { 
+  /*  width: 40vw;*/
+}
+.product_photo-wrapper_lg .product_photo {
+    width:100%;
+}
+.product_description {
+  /*  width: 38vw;*/
+  margin: 0 auto;
+  letter-spacing: -1px;
+  text-align: left;
+}
+ /*
+ ******Looks like working
+ */
+ .another_goods_wrapper>h2 {
+    margin-bottom: 22px;
+    margin-top: 10px;
+}
+
+.product_name {
+    margin-bottom: 9px;
+    font-weight: 500;
+    margin-bottom: 0;
+
+}
+.product_about {
+    margin-top: 3px;
+}
+.price_old {
+    color: #999999;
+    text-decoration: line-through;
+}
+.price_new {
+  color: #f68235;
+  margin-left: 9px;
+}
+.share_this_wrapper {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.share_this {
+    width: 96%;
+    margin:0 auto;
+}
+.share_this_block {
+    float: right;
+}
+.share_this_block {
+    padding: 0;
+}
+.share_this_block:nth-child(1) {
+    text-align: right;
+}
+.share_this p {
+    margin-bottom: 0;
+}
+.share_this_block .share_link {
+    display: inline-block;
+    width: 22.5%;
+}
+
+/*ALSO LOOK */
+.also_look {
+    width: 96%;
+    margin: 20px auto 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.also_look_block>p {
+    margin-bottom: 20px;
+}
+.also_look_item {
+    margin-bottom: 8px;
+}
 /*===============FOOTER===*/
 footer {
     background-color: #000;
 }
+.footer_block:nth-child(4) {
+    float: none;
+    margin: 25px auto;
+    padding: 0;
+    text-align: center;
+    line-height: 2em;
+    color: rgba(96,96,96,1);
+
+}
+.copyrights {
+    margin-top:8px;
+}
+
 .footer_block_title {
     text-transform: uppercase;
 }
+.footer_logo_wrapper {
+    width: 170px;
+    height: 30px;
+    margin: 0 auto;
+}
+/************!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1*****************/
+.footer_follow_list {
+    margin-top: 16px;
+}
+.follow_img_wrapper {
+    display: inline-block;
+    margin-right: 7px;
+    margin-left: 7px;
+}
+.follow_img_wrapper:first-child {
+    margin-left:0;
+}
+
+.follow_img_wrapper:last-child {
+    margin-right: 0;
+}
+
+.footer_pay_list {
+    margin-top: 20px;
+}
+.pay_img_wrapper {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+
+
+
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/*make text gey and underline*/
-.lighter_underline {
-       color: #999999;
-         border-bottom: 1px dotted #999999; 
+   /*make text grey and underline*/
+   .lighter_underline {
+     color: rgb(153,153,153);
+     border-bottom: 1px solid rgba(153,153,153,0.7); 
+ }
+ /*add-on for container/container-fluid wrapper. Inrigate squeeze on mobile*/
+ .un_squeeze {
+    padding-right: 0;
+    padding-left: 0;
 }
 /*
  * Hide visually and from screen readers
  */
 
-.hidden {
+ .hidden {
     display: none !important;
 }
 
@@ -535,7 +773,7 @@ footer {
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 
-.visuallyhidden {
+ .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -552,8 +790,8 @@ footer {
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -566,7 +804,7 @@ footer {
  * Hide visually and from screen readers, but maintain layout
  */
 
-.invisible {
+ .invisible {
     visibility: hidden;
 }
 
@@ -582,8 +820,8 @@ footer {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
+ .clearfix:before,
+ .clearfix:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
@@ -597,21 +835,206 @@ footer {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+   @media only screen and (min-width: 480px) {
+     .item_price {
+        margin:22px 0 0;     
+    }
+    .product-wrapper {
+        text-align: start;
+    }
+    .share_this_block {
+        width:210px;
+        text-align: right;
+    }
 
+    .share_this_block .share_link {
+        width: 45px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .product-wrapper {
+        width: 23%;
+    }
+}
 @media only screen and (min-width: 768px) {
-   .logo-wrap {
-    float: left;
-   }
-   .card_configuration {
+    .header_top {
+        height: 70px;
+    }
+    .logo-wrap {
+        float: left;
+        max-width:220px;
+        height: 35px;
+        padding-left: 0;
+        padding-top: 18px;
+    }
+    .contact_wrap {
+        float: right;
+        padding: 0;
+    }
+    .contact_list {
+        width: 100%;
+        text-align:right;
+        float: right;
+    }
+    .contact_item {
+        float: none;
+        text-align: left;
+        position: relative;
+        padding:20px 0 0 0 ;
+    }
+    .contact_item:nth-child(1) {
+        max-width:195px;
+        padding-left: 0;
+    }
+    .contact_item:nth-child(2) {
+        min-width:90px;
+    }
+    .contact_item:nth-child(3) {
+        width:25%;
+    }
+    .working_days {
+        position: absolute;
+        z-index: 2;
+        left:22%;
+        bottom:-24%;
+        width: 100%;
+        color: #fff;
+    }
+    .header_icon {
+        margin-right: 8px;
+    }
+    .contact_item .plus-toggle {
+        margin-left: 9px;
+    }
+    #phone_list {
+        position: absolute;
+        z-index: 3;
+        background-color: #000;
+        padding: 1em;
+    }
+    /*===========HEADER-BOTTOM=*/
+    .header_bottom {
+        position: relative;
+    }
+    .catalog-toggle {
+        height: 46px;/**relative height+header_bottom height for search input**/
+        line-height: 46px;
 
-    float: left;
+        margin-right: auto;
+    }
+    .catalog_wrapper, .search-wrap {
+        height: 100%;
+    }
+    .catalog_wrapper {
+        /*width: 54.53%; *//*It is for centering with content and slider*/
+        text-align: right;
+
+        /* margin-left: auto;*/
+        padding-left: 0; /*some forcing to push it*/
+    }
+    .search-wrap  {
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 15px;
+    }
+    #desktop_search {
+        position: absolute;
+        right: 0;
+        bottom:9px; /**positioning for searh input. Thank you, relative height***/
+    }
+    .desktop_search_input {
+
+    }
+    .desktop_search_img {
+        position: absolute;
+        top:15%;
+        right: 5%;
+        left:auto;
+        z-index: 105;
+    }
+    .main_menu {
+        height: 47px;
+        border-top:1px solid #606060;
+        vertical-align: middle;
+        line-height: 47px;
+    }
+    .card_configuration {
+        float: left;
+    }
+    .hr_also_look {
+        width: 720px;
+        margin: 0 auto ;
+    }
+    .hr_also_look:first  {
+        margin-top: 8px;
+    }
+
+    .also_look {
+        width: 58.6%;
+        height: 114px;
+        margin: 0 auto;
+        padding-top: 3.33em;
+        padding-bottom: 3.33em;
+    }
+    .also_look_item {
+        display: inline-block;
+    }
+    .also_look > .also_look_wrapper {
+        text-align: center;
+    }
+    .also_look_block p {
+        margin-bottom: 0;
+    }
+
+}
+@media only screen and (min-width: 992px) {
+    .contact_item {
+        text-align: right;
+    }
+    .working_days {
+        left: -17%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .header_bottom {
+        position: relative;
+        height: 38px; /*  to fit the .catalog-toggle height*/
+    }
+    .catalog_wrapper {
+      margin-left: -webkit-calc(33.33% - 20px);
+      margin-left: calc(33.33% - 20px);
+  }
+  .catalog-toggle {
+     width: 275px;
+     height: 38px;
+ }
+ .catalog_link.discount {
+    margin-top: 6px;
+    line-height: 30px;
+}
+
+.discount .toggle_img {
+    vertical-align: middle;
+    margin-right:8px;
+}
+.catalog_link.catalog {
+   line-height: 38px;
+}
+#desktop_search{
+    bottom:11px; /*positioning search input, thank bro Heights*/
+}
+.desktop_search_img {
+    position: absolute;
+    top:15%;
+    right: 5%;
+    left:auto;
+    z-index: 105;
 }
 }
-
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -621,7 +1044,7 @@ footer {
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-@media print {
+   @media print {
     *,
     *:before,
     *:after,
@@ -629,7 +1052,7 @@ footer {
     *:first-line {
         background: transparent !important;
         color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -652,8 +1075,8 @@ footer {
      * or use the `javascript:` pseudo protocol
      */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+     a[href^="#"]:after,
+     a[href^="javascript:"]:after {
         content: "";
     }
 
@@ -668,7 +1091,7 @@ footer {
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
 
-    thead {
+     thead {
         display: table-header-group;
     }
 
@@ -692,4 +1115,7 @@ footer {
     h3 {
         page-break-after: avoid;
     }
+}
+
+}
 }
