@@ -266,7 +266,8 @@ h3 {
     padding: 0;
     float: none;
     background: transparent url(../img/header/catalog_toggle.png) center center;
-    background-size: cover;
+    -webkit-background-size: cover;
+            background-size: cover;
 }
 .catalog_link {
     display: inline-block;
@@ -308,6 +309,7 @@ h3 {
 /*Breadcrumbs*/
 
 .breadcrumb {
+    overflow-y:hidden;
     background: #fff;
 }
 .breadcrumb-item {
@@ -533,6 +535,7 @@ h3 {
  color: #000;
 }
 .item_amount_caution p {
+    font-size: 12px;
     margin-bottom: 0;
 }
 .item_amount_caution:after {
@@ -568,7 +571,7 @@ h3 {
     line-height: 40px;
 }
 .tobasket_text {
-
+    font-size: 12px;
     margin-left: 8px;
 }
 
@@ -587,12 +590,13 @@ h3 {
     margin:0 10px;
     color: #999999;
 }
-.shops a {
-    color:#000;
-    margin-left: 8px;
-}
 .shop_amount {
-    border-bottom: 1px solid rgba(0,0,0,0.5);
+    margin-left: 8px;
+    background-color: transparent;
+    border: none;
+}
+.shop_amount:focus {
+    outline: none;
 }
 
 /*DETAILS about ITEM*/
@@ -634,7 +638,7 @@ h3 {
 .product_description {
   /*  width: 38vw;*/
   margin: 0 auto;
-  letter-spacing: -1px;
+  letter-spacing: -0.083em;
   text-align: left;
 }
  /*
@@ -672,9 +676,7 @@ h3 {
 }
 .share_this_block {
     float: right;
-}
-.share_this_block {
-    padding: 0;
+     padding: 0;
 }
 .share_this_block:nth-child(1) {
     text-align: right;
@@ -700,11 +702,12 @@ h3 {
 .also_look_item {
     margin-bottom: 8px;
 }
+
 /*===============FOOTER===*/
 footer {
     background-color: #000;
 }
-.footer_block:nth-child(4) {
+.footer_block_contact {
     float: none;
     margin: 25px auto;
     padding: 0;
@@ -750,10 +753,93 @@ footer {
     margin-right: 5px;
     margin-left: 5px;
 }
+/*=================MODAL*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
+/* Modal Content/Box */
+.modal_content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 90%; /* Could be more or less, depending on screen size */
+}
+/*Modal Header*/
+.modal_header {
+    height: 35px;
+    background-color: rgba(219,219,219,1);
+}
+.modal_title  {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+    padding-left: 5px;
+    font-weight:300
+}
+.modal_title,.close {
+    display: inline-block;
+}
+/* The Close Button */
+.close {
+    height: 100%;
+    vertical-align: middle;
+    line-height: 35px;
+     float: right;
+    color: #727272;
+    font-size: 36px;
+    font-weight: 300;
+    margin-right: 7px;
+}
 
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Modal body*/
+.modal_body{
+    font-size: 12px;
+    padding:0;
+}   
+.modal_hr {
+    margin: 0;
+}
 
+.modal-body_title {
+    text-align: center;
+    margin:20px auto;
+}
+.modal_info_block {
+    text-align: center;
+    padding: 8.3% 20%;
+}
+.modal_hr.visible-xs {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+.shop_title {
+    font-weight: 500;
+}
+.external_map {
+    color: #000;
+}
+.modal_footer {
+    height: 58px;
 
+}
 
 
 /* ==========================================================================
@@ -840,9 +926,7 @@ footer {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+    Media Queries for Responsive Design.
    ========================================================================== */
    @media only screen and (min-width: 480px) {
        .item_price {
@@ -1032,6 +1116,7 @@ footer {
         display: inline-block;
         height: 100%;
         vertical-align: top;
+        font-size: 12px;
     }
     .ico_wrapper {
         padding: 8px 6px 7px 10px;
@@ -1042,13 +1127,13 @@ footer {
     .timeleft_block p {
         margin-bottom: 0;
         font-weight: 300;
-        letter-spacing: -0.5px;
+        letter-spacing: -0.04em;
     }
     #countdown_timer {
         color: rgba(246,130,53,1);
     }
 
-    /*Card Configuration============*/
+    /*Card Configuration=========================================================*/
     .card_content {
         width: 100%;
     }
@@ -1081,7 +1166,14 @@ footer {
         padding: 0;
         text-align: center;
     }
+  .item_size_toggle {
+    margin-top: 20px;
+    margin-bottom: 21px;
+
+}
+    
     .item_amount {
+        margin-top: 20px;
         margin-bottom: 16px;
     }
     .item_action {
@@ -1102,19 +1194,22 @@ footer {
     .order_call span {
         margin: 0 5px;
     }
+    .order_call a:nth-of-type(1) {
+        margin-left: 33px;
+    }
     .order_call a:nth-of-type(2) {
         margin-left: 0;
     }
     .order_item_title {
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin-top: 12px;
+    margin-bottom: 15px;
     }
-    .item_block_info {
-        margin-top: 20px;
-        margin-bottom: 20px;
+    .item_block_info h2 {
+        margin-top: 18px;
+        margin-bottom: 18px;
     }
     .hr_also_look {
-       width: 93.75%;
+       width: 750px;
         margin: 0 auto ;
     }
     .hr_also_look:first  {
@@ -1142,7 +1237,7 @@ footer {
         margin-bottom: 20px;
     }
     .also_look {
-        width: 58.6%;
+        width: 62%;
         height: 114px;
         margin: 0 auto;
         padding: 3.33em 0;
@@ -1158,17 +1253,132 @@ footer {
     }
     .also_look_title {
         margin-bottom: 0;
-        margin-right: 2.3%;
+        margin-right: 1.5%;
     }
     .also_look_item {
-        margin: 0 2.3%;
+        margin: 0 1.5%;
         display: inline;
         text-align: left;
         vertical-align: middle;
         margin-bottom: 0;
     }
-    .also_look_item:last {
+    .also_look_item:last-of-type {
         margin-right: 0;
+    }
+    .helper {
+        margin-top: 2.75rem;
+        margin-bottom: 2.75rem;
+    }
+    .helper_block {
+        display: inline-block;
+        vertical-align: top;   
+        margin:0 5.23%;
+        padding: 0;
+        text-align: center;
+        font-size: 0.83rem;
+        font-weight: 300;
+        letter-spacing: -0.025em;
+    }
+    .helper_block:nth-of-type(1) {
+        width: 20%;
+    }
+    .helper_block:nth-of-type(2) {
+        width: 21%;
+    }
+    .helper_block:nth-of-type(3) {
+        width: 24%;
+    }
+    .helper_block .shop_amount {
+        margin:0;
+        padding:0;
+        margin-right: 4px;
+    }
+
+    /*FOOTER========*/
+    footer {
+        padding-top: 30px;
+    }
+    .footer_block {
+        padding: 0;
+    }
+    .footer_block_title {
+        margin-top: 0;
+        color: #fff;
+        font-size: inherit;
+    }
+    .footer_block_customer {
+        margin-left: 8.4%;
+    }
+    .footer_block_about {
+        margin-left: 4.12%; /*it's a tricky move. 1%~7.03px. */
+    }
+    .footer_block_contact {
+        margin: 0 auto 15px;
+        padding-left:5px;
+        padding-right: 7px;
+        float: right;
+        text-align: right;
+        font-size: 1.083rem;
+    }
+    .footer_block_title, .footer_block_item { /*// combination to reduce numbers of variables*/
+        margin-bottom: 20px; 
+        line-height: 1em;
+    }
+    .footer_logo_wrapper {
+        width: 242px;
+        height: 37px;
+        margin-right:  0;
+        margin-left: auto;
+    }
+    .copyrights {
+        margin-top: 22px;
+    }
+    .footer_pay_list {
+        margin-top: 10px;
+        margin-right: 36px;
+    }
+    /*Modal*/
+    .modal_content {
+        width: 635px;
+    }
+    .modal_title  {
+        font-size: 18px;
+        padding-left: 36px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .modal_body{
+        padding: 0  40px 10px;
+    }   
+    .modal-body_title {
+    margin:38px auto;
+    }
+    .modal_body_wrapper {
+        padding-top: 35px;
+    }
+    .modal_info_block {
+    vertical-align: bottom;
+    text-align: center;
+    padding: 15px 15px;
+    }
+    .shop_title {
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: -0.06em;
+    }
+    .shop_description {
+        font-weight: 100;
+    }
+    .external_map {
+        display: block;
+        margin-bottom: 0;
+        margin-top: auto;
+    }
+    .modal_info_block:first-of-type .external_map  {
+        margin-top: 27px;
+    }
+    .modal_info_block:last-of-type .external_map  {
+        margin-top: 28px;
     }
 
 }
@@ -1195,11 +1405,20 @@ footer {
     .price span:nth-child(3) {
         padding-left: 15px;
     }
+    .hr_also_look {
+        width: 970px;
+    }
+    .footer_block_about {
+        margin-left: 8.6%; /*it's a tricky move. 1%~7.03px. */
+    }
 
 }
 @media only screen and (min-width: 1200px) {
+    body,html {
+        font-size: 14px;
+    }
      h2,.item_name {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
     }
     /*******************8*/
     #site_header>.container {
@@ -1217,6 +1436,7 @@ footer {
         padding-top: 30px;
     }
     .contact_list {
+        font-size: 1.071rem;
         width: 55.52%;
     }
     .contact_item {
@@ -1252,6 +1472,9 @@ footer {
      width: 275px;
      height: 38px;
     }
+    .catalog_link {
+        font-size: 1rem;
+    }
  .catalog_link.discount {
    margin-top: 6px;
    line-height: 30px;
@@ -1276,9 +1499,74 @@ footer {
     left:auto;
     z-index: 105;
 }
+ .fitit_text {
+        margin-bottom: 0;
+    }
+.item_amount_output {
+    width: 76px;
+}
+  .item_color_toggle {
+        margin-top: 13px;
+    }
+    .item_color_pallete {
+        margin-bottom: 13px;
+    }
+.item_tolike {
+    width: 165px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 0;
+}
+.item_tolike>span {
+    text-transform: uppercase;
+    margin-left: 11px;
+}
+
+.share_this_block:nth-of-type(1) {
+    width: 155px;
+}
+.share_this_block .share_link {
+    width: 35px;
+}
+.goods-wrapper {
+    text-align: center;
+}
+.product_photo-wrapper_lg .product_photo {
+    width: 74%;
+}
+.goods_title {
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+ .hr_also_look {
+        width: 1170px;
+    }
+    .helper>.container {
+        position: relative;
+    }
+    .up_link_wrapper {
+        position: absolute;
+        right: 0;
+        top:30%;
+        width: 59px;
+        height: 59px;
+        background-color: rgba(222,222,222,1);
+        border: 1px solid rgba(204,204,204,1);
+    }
+    .up_link {
+        display: block;
+        height: 100%;
+        line-height: 59px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    footer {
+        padding-top: 2.33em
+    }
 }
 @media print,
 (-webkit-min-device-pixel-ratio: 1.25),
+(-o-min-device-pixel-ratio: 5/4),
 (min-resolution: 1.25dppx),
 (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
@@ -1299,7 +1587,8 @@ footer {
         background: transparent !important;
         color: #000 !important; /* Black prints faster:
         http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+                box-shadow: none !important;
         text-shadow: none !important;
     }
 

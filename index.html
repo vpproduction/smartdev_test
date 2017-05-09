@@ -3,16 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>Test // Parshikov</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-
-
-
-    
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -45,7 +40,7 @@
 
                        <form id="mobile_search" method="post" action="#">
                         <div class="mobile_search_wrapper">
-                           <input type="text" class="mobile_search_input" name="search"  placeholder="Поиск..." autocomplete="">
+                           <input type="text" class="mobile_search_input" name="search"  placeholder="Поиск..." autocomplete="on">
                            <img class="mobile_search_img" src="img/header/search.png" alt="">
                        </div>
 
@@ -110,7 +105,7 @@
             <div class="search-wrap hidden-xs col-sm-4  col-md-3  col-lg-3 col-lg-offset-2">
                <form id="desktop_search" method="post" action="#">
                 <div class="desktop_seach_wrapper">
-                   <input type="text" class="desktop_search_input" name="search"  placeholder="Поиск..." autocomplete="">
+                   <input type="text" class="desktop_search_input" name="search"  placeholder="Поиск..." autocomplete="on">
                    <img class="desktop_search_img" src="img/header/search.png" alt="">
                </div>
            </form>   
@@ -149,22 +144,22 @@
 <section id="content">
     <div class="container ">
         <div class="row card_breadcrumbs">
-            <nav class="breadcrumb">
+            <nav class="breadcrumb  ">
               <a class="breadcrumb-item" href="#">Главная страница&nbsp;<span style="color:#000;">/</span></a>
               <a class="breadcrumb-item" href="#">Каталог&nbsp;<span style="color:#000;">/</span></a>
               <a class="breadcrumb-item" href="#">Категория&nbsp;1&nbsp;<span style="color:#000;">/</span></a><br class="visible-xs">
               <span class="breadcrumb-item active">Costa Patch Pocket Denim Top</span>
           </nav>
           <div class="discount_timeleft hidden-xs">
-                <div class="timeleft_block ico_wrapper">
-                    <img src="img/content/countdown.png" alt="countdown timer" class=" timeleft_img">
-                </div>
-                <div class="timeleft_block time_wrapper">
-                    <p>До конца распродажи</p>
-              <div id="countdown_timer"></div>
-                </div>
-               
-              
+            <div class="timeleft_block ico_wrapper">
+                <img src="img/content/countdown.png" alt="countdown timer" class=" timeleft_img">
+            </div>
+            <div class="timeleft_block time_wrapper">
+                <p>До конца распродажи</p>
+                <div id="countdown_timer"></div>
+            </div>
+
+
         </div>
     </div>
     <div class="row card_content">
@@ -191,13 +186,13 @@
                     <span>30 000 грн.</span> <br class="visible-xs visible-sm">
                     <span>15 000 грн.</span>
                 </div>
-                <div class="item_discount col-xs-5 col-sm-3">
+                <div class="item_discount col-xs-5 col-sm-2">
                     <img src="img/discount-50.png" alt="50% discount" class="img_discount">
                 </div>
             </div>
         </div>
         
-    <hr class="hr_this">
+        <hr class="hr_this">
         <div class="item_color_toggle">
             <p><b>Цвет:</b>Синий</p>
             <form class="item_color_pallete">
@@ -257,44 +252,153 @@
 
                 <p class="shops">
                     <img src="/img/loc.png" alt="">
-                    <a class="shop_amount" href="#">
-                        Наличие в бутиках ONE CLUB
-                    </a>
-                </p>
-            </div>
-            <hr class="hr_this">
-            <div class="item_block_info details_block">
-                <h2>Описание и детали<span  href="#collapse1" class="plus-toggle">+</span></h2>
-                <div id="collapse1" class="block_content_wrapper" style="display:none">
-                    <p><b>Состав:</b>&nbsp;100% трикотаж</p>
-                    <p><b>Сезон:</b>&nbsp;демисезон</p>
-                    <p><b>Детали:</b>
-                        <span id="product_description">
-                         Облегающая модель выполнена из гладкого трикотажа.
-                     </span>
-                 </p>
-                 <p class="t-code">
-                    Код товара:
-                    <span>
-                       1234-5678-8765-4321
-                   </span>
+                    <!-- Button trigger modal -->
+                    <button  id="modalTrigger" class="shop_amount" type="button"  data-toggle="modal" data-target="#myModal">
+                       <u>Наличие в бутиках ONE CLUB</u>
+                   </button>                    
                </p>
-
            </div>
-       </div>
-       <hr class="hr_this">
-       <div class="item_block_info measure_block">
-        <h2>Измерения<span href="#collapse2" class="plus-toggle">+</span></h2>
-        <div id="collapse2" class="block_content_wrapper" style="display:none">
-           <p class="">
-            <b>Размер вещи на фото:</b>S
-        </p>
-        <p class="">Обхват груди: 85см</p>
-        <p class="">Обхват талии: 61см</p>
-        <p class="">Обхват бедер: 175см</p>
-        <p class="">Рост:175см</p><br>
-        <p><b>Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, <span><a href="#" >таблицей размеров</a></span> или обратитесь к нашему консультанту.</b></p> 
+           <!-- Modal -->
+            <!-- Trigger/Open The Modal -->
+
+<!-- The Modal -->
+<div id="shopsModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal_content">
+    <div class="modal_header">
+    <span class="close">&times;</span>
+     <h4 class=" modal_title text-uppercase" >Наличие товара <br class="visible-xs"> в бутиках One Club</h4>
     </div>
+    <div class="modal_body">
+    <p class="modal-body_title">Платье <b>Current Elliott</b>, размер S</p>
+                <hr class="modal_hr">
+        <div class="modal_body_wrapper row">
+                    <div class="modal_info_block col-xs-12 col-sm-4">
+                        <p class="shop_title">
+                        ТЦ ГЛОБУС (3 линия, 2 этаж)
+                        </p>
+                        <p class="shop_description">
+                        г. Киев, ул. Институтская, 2 
+                        Тел.: +380 44 599-69-99
+                        Время работы: 10:00 - 22:00
+                        </p>
+                        <a href="" class="external_map"><u>Показать на карте</u></a>
+                        
+                    </div>
+                    <hr class="modal_hr visible-xs">
+                    <div class="modal_info_block col-xs-12 col-sm-4">
+                        <p class="shop_title">ТЦ МАНУФАКТУРА</p>
+                        <p class="shop_description">
+                        Обуховское шоссе-2, 2
+                        с. Ходосеевка, Киевская область
+                        Тел.: +380 44 200-98-98
+                        Время работы: 10:00 - 21:00
+                        </p>
+                        <a href="" class="external_map"><u>Показать на карте</u></a>
+                         
+                    </div>
+                   <hr class="modal_hr visible-xs">
+                    <div class="modal_info_block col-xs-12 col-sm-4">
+                        <p class="shop_title">ТРЦ АТМОСФЕРА</p>
+                        <p class="shop_description">
+                        г. Киев, Столичное шоссе, 103
+                        Тел.: +380 44 393-47-07
+                        Время работы: 10:00 - 21:00
+                        </p>
+                        <a href="" class="external_map"><u>Показать на карте</u></a>
+                    </div>
+
+                </div>
+     <hr class="modal_hr hidden-xs">           
+    </div>
+    
+    <div class="modal_footer hidden-xs">
+        
+    </div>
+    
+
+  </div>
+
+</div>
+
+           <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-uppercase" id="myModalLabel">Наличие товара в бутиках One Club</h4>
+                </div>
+                <div class="modal-body row">
+                <p class="center-block moodal-body_title">Платье <b>Current Elliott</b>, размер S</p>
+                    <div class="col-xs-12 col-sm-4">
+                        <p class="shop_title">
+                        ТЦ ГЛОБУС (3 линия, 2 этаж)
+                        </p>
+                        <p class="shop_description">
+                        г. Киев, ул. Институтская, 2 
+                        Тел.: +380 44 599-69-99
+                        Время работы: 10:00 - 22:00
+                        </p>
+                        <a href="" class="external_map"><u>Показать на карте</u></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <p class="shop_title">ТЦ МАНУФАКТУРА</p>
+                        <p class="shop_description">
+                        Обуховское шоссе-2, 2
+                        с. Ходосеевка, Киевская область
+                        Тел.: +380 44 200-98-98
+                        Время работы: 10:00 - 21:00
+                        </p>
+                        <a href="" class="external_map"><u>Показать на карте</u></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <p class="shop_title">ТРЦ АТМОСФЕРА</p>
+                        <p class="shop_description">
+                        г. Киев, Столичное шоссе, 103
+                        Тел.: +380 44 393-47-07
+                        Время работы: 10:00 - 21:00
+                        </p>
+                        <a href="" class="external_map"><u>Показать на карте</u></a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <hr class="hr_this">
+    <div class="item_block_info details_block">
+        <h2>Описание и детали<span  href="#collapse1" class="plus-toggle">+</span></h2>
+        <div id="collapse1" class="block_content_wrapper" style="display:none">
+            <p><b>Состав:</b>&nbsp;100% трикотаж</p>
+            <p><b>Сезон:</b>&nbsp;демисезон</p>
+            <p><b>Детали:</b>
+                <span id="product_description">
+                 Облегающая модель выполнена из гладкого трикотажа.
+             </span>
+         </p>
+         <p class="t-code">
+            Код товара:
+            <span>
+               1234-5678-8765-4321
+           </span>
+       </p>
+
+   </div>
+</div>
+<hr class="hr_this">
+<div class="item_block_info measure_block">
+    <h2>Измерения<span href="#collapse2" class="plus-toggle">+</span></h2>
+    <div id="collapse2" class="block_content_wrapper" style="display:none">
+       <p class="">
+        <b>Размер вещи на фото:</b>S
+    </p>
+    <p class="">Обхват груди: 85см</p>
+    <p class="">Обхват талии: 61см</p>
+    <p class="">Обхват бедер: 175см</p>
+    <p class="">Рост:175см</p><br>
+    <p><b>Чтобы выбрать подходящий размер, воспользуйтесь онлайн-примерочной, <span><a href="#" >таблицей размеров</a></span> или обратитесь к нашему консультанту.</b></p> 
+</div>
 </div>
 <hr class="hr_this">
 <div class="item_block_info delivery_block">
@@ -396,7 +500,7 @@
     <div class="container">
         <h2 class="goods_title">Похожие товары:</h2>
         <div class="goods-wrapper row">
-           <div class="col-xs-3 product-wrapper_lg">
+           <div class="col-xs-3 col-lg-3 product-wrapper_lg">
             <div class="product_photo-wrapper_lg">
                 <img src="img/item-other.jpg" alt="" class="product_photo">
                 <div class="product_description_lg">
@@ -406,7 +510,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-3 product-wrapper_lg">
+        <div class="col-xs-3 col-lg-3 product-wrapper_lg">
             <div class="product_photo-wrapper_lg">
                 <img src="img/item-other.jpg" alt="" class="product_photo">
                 <div class="product_description_lg">
@@ -416,7 +520,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-3 product-wrapper_lg">
+        <div class="col-xs-3 col-lg-3 product-wrapper_lg">
             <div class="product_photo-wrapper_lg">
                 <img src="img/item-other.jpg" alt="" class="product_photo">
                 <div class="product_description_lg">
@@ -426,7 +530,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-3 product-wrapper_lg">
+        <div class="col-xs-3 col-lg-3 product-wrapper_lg">
             <div class="product_photo-wrapper_lg">
                 <img src="img/item-other.jpg" alt="" class="product_photo">
                 <div class="product_description_lg">
@@ -442,134 +546,138 @@
 </section>
 <hr class="hr_this hr_also_look hidden-xs" >
 <section class="also_look">
-       
-            <div class="also_look_block">
-                <p class="also_look_title">Смотрите также:</p>
-                <ul class="also_look_list">
-                    <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Одежда</a></li>
-                    <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Трикотаж</a></li>
-                    <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Шелк</a></li>
-                    <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Все товары бренда Phillip Plein</a></li>
-                  
-                </ul>
-            </div>
 
-    </section>
-    <hr class="hr_this hr_also_look hidden-xs" >
-    <section class="helper">
-        <div class="container">
-            <div class="row">
-                <div class="helper_block hidden-xs col-sm-4">
-                    <h3 class="helper_title">Ценность</h3>
-                    <p class="helper_description">Мы предлагаем подлинные качественные товары люксовых брендов по доступным ценам</p>
-                </div>
-                <div class="helper_block hidden-xs col-sm-4">
-                    <h3 class="helper_title">Доставка</h3>
-                    <p class="helper_description">Вы можете примерить вещи в одном из наших бутиков или заказать доставку по любому удобному адресу</p>
-                </div>
-                <div class="helper_block hidden-xs col-sm-4">
-                    <h3 class="helper_title">Помощь</h3>
-                    <p class="helper_description">Время работы службы поддержки: <br> ежедневно с 10:00 до 21:00. <br>+38 044 359-08-99, +38 095 458-98-46 </p>
-                </div>
+    <div class="also_look_block">
+        <p class="also_look_title">Смотрите также:</p>
+        <ul class="also_look_list">
+            <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Одежда</a></li>
+            <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Трикотаж</a></li>
+            <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Шелк</a></li>
+            <li class="also_look_item"><a href="#" class="also_look_link lighter_underline">Все товары бренда Phillip Plein</a></li>
+
+        </ul>
+    </div>
+
+</section>
+<hr class="hr_this hr_also_look hidden-xs" >
+<section class="helper">
+    <div class="container">
+        <div class="row">
+            <div class="helper_block hidden-xs">
+                <h3 class="helper_title">Ценность</h3>
+                <p class="helper_description">Мы предлагаем подлинные качественные товары люксовых брендов по доступным ценам</p>
+            </div>
+            <div class="helper_block hidden-xs">
+                <h3 class="helper_title">Доставка</h3>
+                <p class="helper_description">Вы можете примерить вещи в одном из наших 
+                <button id="modalTrigger" class="shop_amount" type="button"  data-toggle="modal" data-target="#myModal">
+                <u>бутиков</u>
+                </button>или заказать доставку по любому удобному адресу</p>
+            </div>
+            <div class="helper_block hidden-xs">
+                <h3 class="helper_title">Помощь</h3>
+                <p class="helper_description">Время работы службы поддержки: <br> ежедневно с 10:00 до 21:00. <br>+38 044 359-08-99, +38 095 458-98-46 </p>
             </div>
         </div>
+        <div class="up_link_wrapper visible-lg">
+         <!-- I used #site_header id  just to demonstrate how smooth scrolling works-->
+         <a href="#site_header" class="up_link">
+            <img src="img/helper/arrow_up.png" alt="arrow up" class="up">
+        </a>
+    </div>
+</div>
 
 
-    </section>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="footer_block col-sm-3 hidden-xs text-uppercase">
-                    <h4 class="footer_block_title">Каталог</h4>
-                    <ul class="footer_block_list">
-                        <li class="footer_block_item"><a href="#">Женщинам</a></li>
-                        <li class="footer_block_item"><a href="#">Мужчинам</a></li>
-                        <li class="footer_block_item"><a href="#">Детям</a></li>
-                        <li class="footer_block_item"><a href="#">Для дома</a></li>
-                        <li class="footer_block_item"><a href="#">Бренды</a></li>
-                    </ul>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="footer_block footer_block_catalog col-sm-2 hidden-xs text-uppercase">
+                <h4 class="footer_block_title">Каталог</h4>
+                <ul class="footer_block_list">
+                    <li class="footer_block_item"><a href="#">Женщинам</a></li>
+                    <li class="footer_block_item"><a href="#">Мужчинам</a></li>
+                    <li class="footer_block_item"><a href="#">Детям</a></li>
+                    <li class="footer_block_item"><a href="#">Для дома</a></li>
+                    <li class="footer_block_item"><a href="#">Бренды</a></li>
+                </ul>
+            </div>
+            <div class="footer_block footer_block_customer col-sm-2  hidden-xs">
+                <h4 class="footer_block_title">Покупателям</h4>
+                <ul class="footer_block_list">
+                    <li class="footer_block_item"><a href="#">Оплата</a></li>
+                    <li class="footer_block_item"><a href="#">Возврат</a></li>
+                    <li class="footer_block_item"><a href="#">Доставка</a></li>
+                    <li class="footer_block_item"><a href="#">Оферта</a></li>
+                    <li class="footer_block_item"><a href="#">Поддержка</a></li>
+                </ul>
+            </div>
+            <div class="footer_block footer_block_about col-sm-2  hidden-xs">
+                <h4 class="footer_block_title">О нас</h4>
+                <ul class="footer_block_list">
+                    <li class="footer_block_item"><a href="#">О проекте</a></li>
+                    <li class="footer_block_item"><a href="#">Вакансии</a></li>
+                    <li class="footer_block_item"><a href="#">Партнёрам</a></li>
+                    <li class="footer_block_item"><a href="#">Контакты</a></li>
+                    <li class="footer_block_item"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer_block footer_block_contact col-sm-4 col-md-3">
+                <div class="footer_logo_wrapper"><img src="img/logo-footer.svg" alt=""></div>
+                <div class="copyrights">
+                    <copyright > © 2016 One Club 2.0 <br> All Right reserved</copyright>
                 </div>
-                <div class="footer_block col-sm-3 hidden-xs">
-                    <h4 class="footer_block_title">Покупателям</h4>
-                    <ul class="footer_block_list">
-                        <li class="footer_block_item"><a href="#">Оплата</a></li>
-                        <li class="footer_block_item"><a href="#">Возврат</a></li>
-                        <li class="footer_block_item"><a href="#">Доставка</a></li>
-                        <li class="footer_block_item"><a href="#">Оферта</a></li>
-                        <li class="footer_block_item"><a href="#">Поддержка</a></li>
-                    </ul>
-                </div>
-                <div class="footer_block col-sm-2 hidden-xs">
-                    <h4 class="footer_block_title">О нас</h4>
-                    <ul class="footer_block_list">
-                        <li class="footer_block_item"><a href="#">О проекте</a></li>
-                        <li class="footer_block_item"><a href="#">Вакансии</a></li>
-                        <li class="footer_block_item"><a href="#">Партнёрам</a></li>
-                        <li class="footer_block_item"><a href="#">Контакты</a></li>
-                        <li class="footer_block_item"><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer_block col-sm-4">
-                    <div class="footer_logo_wrapper"><img src="img/logo-footer.svg" alt=""></div>
-                    <div class="copyrights">
-                        <copyright > © 2016 One Club 2.0 <br> All Right reserved</copyright>
-                    </div>
 
 
-                    <ul class="footer_follow_list">
-                     <li class="follow_img_wrapper"><img src="img/footer/follow-fb.png" alt="" class="img_follow"></li>
-                     <li class="follow_img_wrapper"><img src="img/footer/follow-inst.png" alt="" class="img_follow"></li>
-                     <li class="follow_img_wrapper"><img src="img/footer/follow-twitter.png" alt="" class="img_follow"></li>
-                     <li class="follow_img_wrapper"><img src="img/footer/follow-pint.png" alt="" class="img_follow"></li>
-                 </ul>
+                <ul class="footer_follow_list">
+                 <li class="follow_img_wrapper"><img src="img/footer/follow-fb.png" alt="" class="img_follow"></li>
+                 <li class="follow_img_wrapper"><img src="img/footer/follow-inst.png" alt="" class="img_follow"></li>
+                 <li class="follow_img_wrapper"><img src="img/footer/follow-twitter.png" alt="" class="img_follow"></li>
+                 <li class="follow_img_wrapper"><img src="img/footer/follow-pint.png" alt="" class="img_follow"></li>
+             </ul>
+
+             <ul class="footer_pay_list" >
+                <li class="pay_img_wrapper ">
+                 <img src="img/footer/pay-visa.png" alt="" class="block_img_pay"></li>
+                 <li class="pay_img_wrapper "><img src="img/footer/pay-mastercard.png" alt="" class="block_img_pay"></li>
+                 <li class="pay_img_wrapper "><img src="img/footer/pay-liqpay.png" alt="" class="block_img_pay"></li>
+             </ul>
 
 
 
 
-
-
-                 <ul class="footer_pay_list" >
-                    <li class="pay_img_wrapper ">
-                     <img src="img/footer/pay-visa.png" alt="" class="block_img_pay"></li>
-                     <li class="pay_img_wrapper "><img src="img/footer/pay-mastercard.png" alt="" class="block_img_pay"></li>
-                     <li class="pay_img_wrapper "><img src="img/footer/pay-liqpay.png" alt="" class="block_img_pay"></li>
-                 </ul>
-
-
-
-
-             </div>
          </div>
      </div>
- </footer>
+ </div>
+</footer>
 
- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
- <script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
 
- <script src="js/owl.carousel.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 
- <script src="js/plugins.js"></script>
+<script src="js/plugins.js"></script>
 <!-- Time countdown scipt -->
 <script type="text/javascript">
-                  $("#countdown_timer").countdown("2025/01/01", function(event) {
-                    $(this).text(
-                      event.strftime('%D дня, %H:%M:%S')
-                      );
-                });
-            </script>
+  $("#countdown_timer").countdown("2025/01/01", function(event) {
+    $(this).text(
+      event.strftime('%D дня, %H:%M:%S')
+      );
+});
+</script>
 
 
- <script src="js/main.js"></script>
- <!-- owl-carousel styles-->
-
-
-
+<script src="js/main.js"></script>
+<!-- owl-carousel styles-->
 
 
 
- <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
- <script>
+
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
