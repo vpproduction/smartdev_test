@@ -9,7 +9,6 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-@import url("bxslider.css");
    html {
     color: #222;
     font-size: 1em;
@@ -909,7 +908,7 @@ footer {
     }
 }
 @media only screen and (min-width: 768px) {
-	 /*===============HEADER===*/
+     /*===============HEADER===*/
    /*================================HEADER_TOP*/
     #site_header>.container {
         padding-left: 11px;
