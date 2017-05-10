@@ -24,3 +24,24 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+
+//bxslider library usage for responsive slider
+//bxSlider
+$('.bxslider').bxSlider({
+  buildPager: function(slideIndex){
+  	auto:true;
+    switch(slideIndex){
+      case 0:
+        return '<img src="img/content/thumbs/dress-1.jpg">';
+      case 1:
+        return '<img src="img/content/thumbs/dress-2.jpg">';
+      case 2:
+        return '<img src="img/content/thumbs/dress-3.jpg">';
+        case 3:
+        return '<img src="img/content/thumbs/dress-4.jpg">';
+    }
+  }
+
+});
