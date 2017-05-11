@@ -179,21 +179,25 @@ h3 {
 }
 /*=============================CONTACT for mobile*/
 .mobile_menu {
-    margin:1.5em 0;
+    margin: 0;
+}
+.mobile_menu_wrapper {
+    margin: 0;
 }
 .mobile_menu_item {
     display: block;
-    padding: 0.75em 50px;
+    padding: 0.75em 20px;
 }
 .mobile_contact_list {
-    margin-top: 1.5em;
+    margin-top: 3.5em;
+    text-align: left;
 }
 .mobile_contact_item {
-    margin-left: 50px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 30px;
 }
 .mobile_contact_item.mobile_phones {
-    display: block;
-    margin-top:1em;
     margin-bottom: 2em;
 }
 .mobile_contact_item.mobile_phones>span,#mobile_phone_list .phone_number {
@@ -201,8 +205,9 @@ h3 {
 }
 .mobile_search_wrapper {
     position: relative;
-    width: 130px;
-    margin-left: 50px;
+    width: 150px;
+    margin-left: 15px;
+    margin-bottom: 15px;
 }
 .mobile_search_input,
 .desktop_search_input {
@@ -231,9 +236,15 @@ h3 {
 .mobile_search_img {
     position: absolute;
     top:15%;
-    right: 5%;
+    right: 4%;
     left:auto;
     z-index: 105;
+}
+.mobile_wrapper .footer_block_item {
+    margin-bottom: 1rem;
+}
+.mobile_wrapper .footer_block_title {
+    margin-top: 0;
 }
 /*===========================CONTACT for desktop*/
 .contact_item {
